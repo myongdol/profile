@@ -1,6 +1,6 @@
 import React from "react";
-import {css} from "@emotion/react";
 import { NavLink } from "react-router-dom";
+import { css } from "@emotion/css";
 
 export default function Nav() {
     return (
@@ -9,7 +9,7 @@ export default function Nav() {
                 <NavLink to='/'>HOME</NavLink>
             </li>
             <li>
-                <NavLink to='/profile'>Profile</NavLink>
+                <NavLink to='/profile'>profile</NavLink>
             </li>
         </nav>
     )
