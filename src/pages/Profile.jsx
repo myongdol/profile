@@ -1,12 +1,20 @@
 import React from "react";
 import { css } from "@emotion/css";
 import { mainSection } from "../style/main";
+import Info from "../components/Info";
+import Career from "../components/Career";
+import Education from "../components/Education";
+import Project from "../components/Project";
+
 
 export default function Profile() {
     return (
-        <section css={profileContainer}>
-            <h1>hi hi </h1>
-        </section>
+        <main css={profileContainer}>
+            <Info />
+            <Career />
+            <Education />
+            <Project />
+        </main>
     );
 }
 
