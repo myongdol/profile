@@ -1,17 +1,6 @@
-import Nav from "./pages/Nav";
-import { css } from "@emotion/css";
-
+import Header from "./components/Header";
 
 export default function App() {
-  return (
-   <section css={Container}>
-   hello
-   <Nav />
-   </section>
-  );
+  return <Header />
 }
 
-const Container = css`
-width: 400px;
-margin-right: 10px;
-`
