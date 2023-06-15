@@ -1,9 +1,15 @@
 import React from "react";
+import { css } from "@emotion/css";
+import { mainSection } from "../style/main";
 
 export default function Home() {
     return (
-        <div>
+        <section css={homeContainer}>
             homehome
-        </div>
+        </section>
     )
 }
+
+const homeContainer = css`
+    ${mainSection}
+`
