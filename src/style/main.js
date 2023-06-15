@@ -20,3 +20,7 @@ export const grayTitleBorderBottom = css`
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(55, 53, 47, 0.16);
 `
+
+export const grayNormalBorderBottom = css`
+    border-bottom: 1px solid rgba(55, 53, 47, 0.16);
+`
