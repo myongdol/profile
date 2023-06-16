@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { grayTitleBorderBottom, grayNormalBorderBottom, contentFontSize } from "../style/main";
+import { grayTitleBorderBottom, grayNormalBorderBottom, contentFontSize16 } from "../style/main";
 
 export default function Career () {
     return (
@@ -26,13 +26,14 @@ const careerContainer = css`
     ul{
         display: grid;
         gap: 15px;
-        grid-template-columns: 4fr 1fr;
-        ${contentFontSize}
-        padding-top: 20px;
+        grid-template-columns: 2fr 1fr;
+        ${contentFontSize16}
+        padding: 20px;
 
         li:first-of-type,
         li:nth-of-type(2) {
             ${grayNormalBorderBottom}
+            border-radius: 3px;
         }
 
         li:nth-of-type(2n + 1) {
