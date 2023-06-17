@@ -1,0 +1,20 @@
+{
+    "projectInfoData": [
+      {
+        "id": "1",
+        "name": "🦊 StackOverFlow 클론코딩 [팀프로젝트]",
+        "period": "2023.06.17 ~ 2023.06.18",
+        "techStack": { "id": "1", "name": ["JavaScript"] },
+        "repositoryLink": "https://github.com/codestates-seb/seb42_pre_008",
+        "projectImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Stack_Overflow_logo.svg/1600px-Stack_Overflow_logo.svg.png"
+      },
+      {
+        "id": "2",
+        "name": "🦋여기 와봤니? [팀프로젝트]",
+        "period": "2023.06.17 ~ 2023.06.18",
+        "techStack": { "id": "2", "name": ["React", "Redux", "Styled-Components", "TypeScript"] },
+        "repositoryLink": "https://github.com/codestates-seb/seb42_main_034",
+        "projectImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Stack_Overflow_logo.svg/1600px-Stack_Overflow_logo.svg.png"
+      }
+    ]
+  }
