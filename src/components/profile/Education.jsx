@@ -11,15 +11,15 @@ export default function Education() {
     const [educationList, setEducationList] = useState([]);
     const educationAPIurl = "/data/educationData.json";
 
-    const educationAPI = async () => {
+    const getEducationData = async () => {
         await axios.get(educationAPIurl).then((res) => {
             const dataList = res.data.educationData;
             setEducationList(dataList);
         });;  
-    };
+    };                                                                                                              
 
     useEffect(() => {
-        educationAPI();
+        getEducationData();
     })
 
 
