@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { contentFontSize16, contentFontSize30, grayTitleBorderBottom, mainColor, boxTextColor } from "../style/main";
+import { contentFontSize16, contentFontSize30, grayTitleBorderBottom, mainColor, boxTextColor } from "../../style/main";
 
 export default function techStacks() {
     return (

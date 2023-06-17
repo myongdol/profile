@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { grayTitleBorderBottom, grayNormalBorderBottom, contentFontSize16 } from "../style/main";
+import { grayTitleBorderBottom, grayNormalBorderBottom, contentFontSize16 } from "../../style/main";
 
 export default function Career () {
     return (

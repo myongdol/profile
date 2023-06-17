@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { URLs } from "../constant";
+import { URLs } from "../../constant";
 
 export default function Info() {
     return (

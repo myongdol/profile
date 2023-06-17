@@ -1,5 +1,5 @@
 import React from "react";
-import { URLs } from "../constant";
+import { URLs } from "../../constant";
 
 export default function Project() {
     return (
