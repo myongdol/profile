@@ -24,13 +24,18 @@ const headerContainer = css`
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
+    background-color: white;
 
     ul{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         gap: 100px;
         ${contentFontSize16}
+        border: 1px solid;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
     li{
