@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "@emotion/css";
 import { contentFontSize16, contentFontSize30, grayTitleBorderBottom, mainColor, boxTextColor } from "../../style/main";
 
-export default function techStacks() {
+export default function TechStacks() {
     return (
         <article css={techStackContainer}>
             <h2>기술스택 목록</h2>

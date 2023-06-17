@@ -5,7 +5,7 @@ import Info from "../components/profile/Info";
 import Career from "../components/profile/Career";
 import Education from "../components/profile/Education";
 import Project from "../components/profile/Project";
-import techStacks from "../components/profile/techStacks";
+import TechStacks from "../components/profile/techStacks";
 
 
 
@@ -15,7 +15,7 @@ export default function Profile() {
             <Info />
             <Career />
             <Education />
-            <techStacks />
+            <TechStacks />
             <Project />
         </main>
     );
