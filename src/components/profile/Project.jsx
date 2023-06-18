@@ -1,55 +1,48 @@
 import React from "react";
-import { URLs } from "../../constant";
 import { css } from "@emotion/css";
 import { mainColor, boxTextColor, contentFontSize16, contentFontSize30, grayTitleBorderBottom } from "../../style/main";
-
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 
 export default function Project() {
-    return (
+  const [projectList, setProjectList] = useState([]);
+
+  const getProjectData = async () => {
+    await axios.get("/data/projectInfoData.json").then((res) => {
+      const dataList = res.data.projectInfoData;
+      setProjectList(dataList);
+    });
+  };
+
+  useEffect(() => {
+    getProjectData();
+  }, []);
+
+
+  return (
         <article css={projectContainer}>
             <h2>프로젝트 목록</h2>
-            <section>
-                <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt="dd" />
+            <div>
+            {projectList.map((item) => (
+          <React.Fragment key={`project-${item.id}`}>
+            <a href={item.repositoryLink} target='_blank' rel='noreferrer'>
+              <section>
+                <img src={item.projectImage} alt='' />
                 <div>
-                    <p>스택오버플로우</p>
-                    <p>123기간 ~ 기간123</p>
-                    <a href={URLs.project1} target="_blank" rel="noreferrer">
-                        Github Repository 이동
-                    </a>
-                    <ul>
-                        <li>JavaScript, React</li>
-                    </ul>
+                  <p>{item.name}</p>
+                  <p>{item.period}</p>
+                  <ul className='tech-stack'>
+                    {item.techStack.name.map((x, index) => (
+                      <li key={`techStack-${index}`}>{x}</li>
+                    ))}
+                  </ul>
                 </div>
-            </section>
-
-            <section>
-                <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt="dd" />
-                <div>
-                    <p>스택오버플로우</p>
-                    <p>123기간 ~ 기간123</p>
-                    <a href={URLs.project1} target="_blank" rel="noreferrer">
-                        Github Repository 이동
-                    </a>
-                    <ul>
-                        <li>JavaScript, React</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section>
-                <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt="dd" />
-                <div>
-                    <p>스택오버플로우</p>
-                    <p>123기간 ~ 기간123</p>
-                    <a href={URLs.project1} target="_blank" rel="noreferrer">
-                        Github Repository 이동
-                    </a>
-                    <ul>
-                        <li>JavaScript, React</li>
-                    </ul>
-                </div>
-            </section>
+              </section>
+            </a>
+          </React.Fragment>
+        ))}
+        </div>
         </article>
     )
 }
