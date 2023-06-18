@@ -1,25 +1,13 @@
 import React from "react";
 import { css } from "@emotion/css";
 import { contentFontSize16, contentFontSize30, grayTitleBorderBottom, mainColor, boxTextColor } from "../../style/main";
-import { useState, useEffect } from "react";
-import axios from "axios";
-
+import { useFetch } from "../../hooks/useFetch";
 
 
 export default function TechStacks() {
-    const [techStackData, setTechStackData] = useState([]);
-    const techkStackAPIurl = "/data/techStackData.json";
-
-    const getTechStackData = async () => {
-        await axios.get(techkStackAPIurl).then((res) => {
-            const dataList = res.data.techStackData; 
-            setTechStackData(dataList);
-        });
-    };
-
-    useEffect(() => {
-        getTechStackData();
-    }, []);
+    const fetchUrl = "/data/techStackData.json";
+    const fetchStorage = "techStackData";
+    const {dataList: techStackData} = useFetch(fetchUrl, fetchStorage);
 
 
     return (
