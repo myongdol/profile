@@ -93,4 +93,22 @@ const infoContainer = css`
             ${grayNormalBorderBottom}
         }
     }
+
+    @media (max-width: 743px) {
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    section {
+      flex-wrap: wrap;
+      justify-content: center;
+      p.description,
+      ul {
+        width: 100%;
+      }
+      p.description span:first-of-type {
+        margin-top: -4px;
+      }
+    }
+  }
 `
