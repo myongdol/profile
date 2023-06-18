@@ -40,7 +40,7 @@ const motionImgContainer = css`
     position: absolute;
     left: calc(50% + 180px);
     margin: 0;
-    font-size: 56px;
+    font-size: 5.6rem;
     font-weight: 700;
     letter-spacing: -3px;
     line-height: 1.2;
@@ -56,14 +56,20 @@ const motionImgContainer = css`
     width: 100%;
     height: 100%;
   }
-  img:nth-of-type(2) {
-    transform: scale(1.5);
-  }
+
   img .progress {
     position: fixed;
     left: 0;
     right: 0;
     height: 5px;
     bottom: 100px;
+  }
+
+  @media (max-width: 953px) {
+    h2 {
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
   }
 `;
