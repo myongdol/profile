@@ -2,8 +2,18 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Profile from "../pages/Profile";
 import Home from "../pages/Home";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Router() {
+    const {pathname} = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        console.log("scroll up, router.jsx")
+    }, [pathname])
+
+    
     return ( 
         <Routes>
             <Route path='/' element={<Home />} />
