@@ -3,7 +3,7 @@ import { css } from "@emotion/css";
 import { mainColor, boxTextColor, contentFontSize16, contentFontSize30, grayTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/useFetch";
 
-export default function Project() {
+export default function Project({state}) {
  
   const fetchUrl = "/data/projectInfoData.json";
   const fetchStorage = "projectInfoData";
@@ -11,7 +11,7 @@ export default function Project() {
 
 
   return (
-        <article css={projectContainer}>
+        <article css={projectContainer(state)}>
             <h2>프로젝트 목록</h2>
             <div>
             {projectList.map((item) => (
@@ -37,7 +37,7 @@ export default function Project() {
     )
 }
 
-const projectContainer = css`
+const projectContainer = (state) => css`
   margin: 30px 0;
   h2 {
     ${grayTitleBorderBottom};
@@ -54,7 +54,9 @@ const projectContainer = css`
       overflow: hidden;
       ${contentFontSize16};
       cursor: pointer;
-      box-shadow: rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px;
+      box-shadow: ${state
+      ? "rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px"
+      : "rgb(0 0 0 / 10%) 2px 4px 4px 0px, rgb(0 0 0 / 10%) 4px "};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
       opacity: 0.7;
