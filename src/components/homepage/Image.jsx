@@ -14,7 +14,7 @@ export default function Image({ id, text, transform }) {
   return (
     <section css={motionImgContainer}>
       <div ref={ref}>
-        <img src={`/image/homepage/ggam-${id}.jpg`} alt='깜이사진' style={{ transform: `${transform}` }} />
+        <img src={`/image/ggam-${id}.jpg`} alt='깜이사진' style={{ transform: `${transform}` }} />
       </div>
       <motion.h2 style={{ y }}>{`${text}`}</motion.h2>
     </section>
