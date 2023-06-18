@@ -6,6 +6,7 @@ export const mainSection = css`
     max-width: 1200px;
     min-height: calc()(100vh - 43px);
     margin: 0 auto;
+    min-width: 334px;
 `;
 
 export const grayBorder = css`
