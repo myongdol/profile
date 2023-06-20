@@ -10,10 +10,3 @@ html {
   text-decoration: none;
 }
 
-#root {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100vh;
-  padding: 10px 0;
-}
