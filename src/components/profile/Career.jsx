@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { grayTitleBorderBottom, grayNormalBorderBottom, contentFontSize16 } from "../../style/main";
+import { grayTitleBorderBottom, grayNormalBorderBottom, contentFontSize16, subColor } from "../../style/main";
 
 export default function Career () {
     return (
@@ -29,15 +29,26 @@ const careerContainer = css`
         grid-template-columns: 2fr 1fr;
         ${contentFontSize16}
         padding: 20px;
+        
+        li {
+            padding: 2px 4px;
+        }
 
         li:first-of-type,
         li:nth-of-type(2) {
             ${grayNormalBorderBottom}
             border-radius: 3px;
+            font-weight: bold;
         }
 
-        li:nth-of-type(2n + 1) {
-            margin: 0 0 0 20px;
+        li:nth-of-type(4n - 1),
+        li:nth-of-type(4n) {
+            background-color: rgb(211, 211 / 16%);
+        }
+
+        li:nth-of-type(4n + 1):not(li:first-of-type),
+        li:nth-of-type(4n + 2):not(li:nth-of-type(2)) {
+            background-color: ${subColor};
         }
     }
 `
