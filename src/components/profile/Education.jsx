@@ -30,10 +30,12 @@ export default function Education() {
 
 const educationContainer = css`
   margin: 30px 0;
+
   h2 {
     ${contentFontSize30}
     ${grayTitleBorderBottom};
   }
+
   ul {
     padding: 20px;
     display: grid;
@@ -41,15 +43,23 @@ const educationContainer = css`
     gap: 5px 10px;
     ${contentFontSize16};
   }
+
   li {
     padding: 2px 4px;
   }
+  
   li:first-of-type,
   li:nth-of-type(2) {
     border-radius: 3px;
     background-color: ${mainColor};
     font-weight: bold;
   }
+
+  li:nth-of-type(4n - 1),
+  li:nth-of-type(4n) {
+    background-color: rgb(221 221 221 / 16%);
+  }
+
   li:nth-of-type(4n + 1):not(li:first-of-type),
   li:nth-of-type(4n + 2):not(li:nth-of-type(2)) {
     background-color: ${subColor};
