@@ -1,8 +1,16 @@
 import React from "react";
 import { css } from "@emotion/css";
 import { NavLink } from "react-router-dom";
-import { contentFontSize16, mainColor } from "../style/main";
 import { useSelector } from "react-redux";
+import { 
+    contentFontSize16,
+     mainColor,
+    darkNavBackgroundColor,
+    lightNavBackgroundColor,
+    darkBackgroundColor,
+    lightBackgroundColor
+} from "../style/main";
+
 
 export default function Header() {
     const state = useSelector((state) => state);
@@ -29,7 +37,7 @@ const headerContainer = (state) => css`
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: ${state ? "#eeeeee" : "#2c2c2f"};
+    background-color: ${state ? lightNavBackgroundColor : darkNavBackgroundColor};
 
     ul{
         display: flex;
@@ -51,7 +59,7 @@ const headerContainer = (state) => css`
             background-color: ${mainColor};
         }
         &:active{
-            background-color: ${state ? "#fff" : "#202124"};
+            background-color: ${state ? lightBackgroundColor : darkBackgroundColor};
         }
     }
 

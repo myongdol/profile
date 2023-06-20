@@ -1,7 +1,17 @@
 import React from "react";
 import { css } from "@emotion/css";
 import { URLs } from "../../constant";
-import { contentFontSize16, contentFontSize40, mainColor } from "../../style/main";
+import { 
+    contentFontSize16,
+    contentFontSize40,
+    mainColor,
+    grayBorder,
+    grayNormalBorderBottom,
+    whiteBorder,
+    whiteNormalBorderBottom 
+} from "../../style/main";
+
+
 
 export default function Info({state}) {
     return (
@@ -64,7 +74,7 @@ const infoContainer = (state) => css`
     }
 
     p {
-        border: ${state ? "1px solid rgba(55, 53, 47, 0.16)" : "1px solid rgba(255, 255, 255, 0.5)"};
+        ${state ? grayBorder : whiteBorder}
         border-radius: 20px;
         padding: 20px;
     }
@@ -86,7 +96,7 @@ const infoContainer = (state) => css`
             margin-top: 14px;
         }
     }
-    
+
     li{
         margin: 4px 0;
 
@@ -98,7 +108,7 @@ const infoContainer = (state) => css`
 
         a span {
             margin-right: 10px;
-            border-bottom: ${state ? "1px solid rgba(55, 53, 47, 0.16)" : "1px solid rgba(255, 255, 255, 0.5)"};
+            ${state ? grayNormalBorderBottom : whiteNormalBorderBottom}
         }
     }
 

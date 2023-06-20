@@ -47,6 +47,8 @@ export const grayBorder = css`
 
 export const darkBackgroundColor = "#202124";
 
+export const darkNavBackgroundColor = "#2c2c2f"
+
 export const darkFontColor = "#eeeeee";
 
 export const darkBoxShadow = "rgb(0 0 0 / 10%) 2px 4px 0px, rgb(0 0 0 / 10%) 4px 4px 10px";

@@ -1,7 +1,16 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { mainColor, boxTextColor, contentFontSize16, contentFontSize30, grayTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/useFetch";
+import {
+  mainColor,
+  boxTextColor,
+  contentFontSize16,
+  contentFontSize30,
+  grayTitleBorderBottom,
+  lightBoxShadow,
+  darkBoxShadow,
+} from "../../style/main";
+
 
 export default function Project({state}) {
  
@@ -54,9 +63,7 @@ const projectContainer = (state) => css`
       overflow: hidden;
       ${contentFontSize16};
       cursor: pointer;
-      box-shadow: ${state
-      ? "rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px"
-      : "rgb(0 0 0 / 10%) 2px 4px 4px 0px, rgb(0 0 0 / 10%) 4px "};
+      box-shadow: ${state ? lightBoxShadow : darkBoxShadow};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
       opacity: 0.7;
