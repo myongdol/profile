@@ -6,20 +6,18 @@ import Career from "../components/profile/Career";
 import Education from "../components/profile/Education";
 import Project from "../components/profile/Project";
 import TechStacks from "../components/profile/techStacks";
-import { useSelector } from "react-redux";
 
 
 export default function Profile() {
-    const state = useSelector((state) => state);
 
 
     return (
         <main css={profileContainer}>
-            <Info state={state}/>
+            <Info/>
             <Career />
             <Education />
             <TechStacks />
-            <Project state={state}/>
+            <Project/>
         </main>
     );
 }
