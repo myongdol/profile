@@ -14,7 +14,7 @@ export default function Profile() {
 
 
     return (
-        <main css={profileContainer({state})}>
+        <main css={profileContainer}>
             <Info state={state}/>
             <Career />
             <Education />
@@ -24,7 +24,6 @@ export default function Profile() {
     );
 }
 
-const profileContainer = ({state}) => css`
+const profileContainer = css`
     ${mainSection}
-    color: ${state ? "#000" : "#fff"};
 `
