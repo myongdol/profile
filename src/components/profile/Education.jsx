@@ -45,6 +45,8 @@ const educationContainer = css`
   }
 
   li {
+    align-items: center;
+    display: flex;
     padding: 2px 4px;
   }
   

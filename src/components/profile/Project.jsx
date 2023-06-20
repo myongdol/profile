@@ -84,6 +84,7 @@ const projectContainer = (state) => css`
     }
   }
   .tech-stack {
+    align-items: center;
     display: flex;
     gap: 10px;
     margin: 0 20px;
