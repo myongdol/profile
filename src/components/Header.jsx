@@ -23,6 +23,7 @@ export default function Header() {
 }
 
 const headerContainer = (state) => css`
+    font-family: "GangwonEduPowerExtraBoldA";
     position: fixed;
     top: 0;
     left: 0;

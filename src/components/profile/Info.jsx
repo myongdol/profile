@@ -47,10 +47,14 @@ const infoContainer = (state) => css`
         height: 256px;
         border-radius: 50%;
     }
+    
     h1 {
+        font-family: "GangwonEduPowerExtraBoldA";
+        letter-spacing: 2px;
         margin: 40px 0;
         ${contentFontSize40}
     }
+
     section {
         display: flex;
         justify-content: space-between;
@@ -58,16 +62,19 @@ const infoContainer = (state) => css`
         line-height: 1.5;
         ${contentFontSize16}
     }
+
     p {
         border: ${state ? "1px solid rgba(55, 53, 47, 0.16)" : "1px solid rgba(255, 255, 255, 0.5)"};
         border-radius: 20px;
         padding: 20px;
     }
+
     ul{
         width: 40%;
         padding: 20px;
         overflow: scroll;
     }
+
     .description{
         display: flex;
         width: 60%;
@@ -79,6 +86,7 @@ const infoContainer = (state) => css`
             margin-top: 14px;
         }
     }
+    
     li{
         margin: 4px 0;
 

@@ -22,6 +22,7 @@ export default function Image({ id, text, transform }) {
 }
 
 const motionImgContainer = css`
+  font-family: "GangwonEduPowerExtraBoldA";
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -29,6 +30,7 @@ const motionImgContainer = css`
   position: relative;
   scroll-snap-align: center;
   perspective: 500px;
+
   div {
     width: 300px;
     height: 400px;
@@ -36,15 +38,17 @@ const motionImgContainer = css`
     max-height: 90vh;
     overflow: hidden;
   }
+
   h2 {
     position: absolute;
     left: calc(50% + 180px);
     margin: 0;
     font-size: 5.6rem;
     font-weight: 700;
-    letter-spacing: -3px;
+    letter-spacing: 2px;
     line-height: 1.2;
   }
+
   img {
     object-fit: cover;
     position: absolute;
