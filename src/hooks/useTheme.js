@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import {changeTheme} from "../redux/actions/themeAction"
+import {changeThemeMode} from "../redux/actions/themeAction"
 
 
 export function useTheme() {
@@ -8,7 +8,7 @@ export function useTheme() {
 
 
     const setTheme = (theme) => {
-        dispatch(changeTheme(theme));
+        dispatch(changeThemeMode(theme));
 
     };
 
