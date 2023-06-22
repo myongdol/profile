@@ -1,7 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { 
     contentFontSize16,
      mainColor,
@@ -10,14 +9,15 @@ import {
     darkBackgroundColor,
     lightBackgroundColor
 } from "../style/main";
+import { useTheme } from "@emotion/react";
 
 
 export default function Header() {
-    const state = useSelector((state) => state);
+    const [theme] = useTheme();
 
 
     return (
-        <nav css={headerContainer(state)}>
+        <nav css={headerContainer(theme)}>
             <ul>
                 <li>
                     <NavLink to='/'>HOME</NavLink>
@@ -30,14 +30,14 @@ export default function Header() {
     )
 }
 
-const headerContainer = (state) => css`
+const headerContainer = (theme) => css`
     font-family: "GangwonEduPowerExtraBoldA";
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: ${state ? lightNavBackgroundColor : darkNavBackgroundColor};
+    background-color: ${theme ? lightNavBackgroundColor : darkNavBackgroundColor};
 
     ul{
         display: flex;
@@ -59,7 +59,7 @@ const headerContainer = (state) => css`
             background-color: ${mainColor};
         }
         &:active{
-            background-color: ${state ? lightBackgroundColor : darkBackgroundColor};
+            background-color: ${theme ? lightBackgroundColor : darkBackgroundColor};
         }
     }
 

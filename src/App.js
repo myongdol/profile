@@ -1,20 +1,17 @@
 import Header from "./components/Header";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { changeThemeMode } from "./redux/actions/themeAction";
 import ThemeButton from "./components/ThemeButton";
-
+import { useTheme } from "./hooks/useTheme";
 
 
 export default function App() {
-  const state = useSelector((state) => state);
-  const [theme, setTheme] = useState(state)
-
-  const dispatch = useDispatch();
+  const [theme, setTheme] = useTheme();
   
   const handleChangeMode = () => {
-    dispatch(changeThemeMode(!theme));
-    setTheme(!theme);
+    if(theme === "light") {
+      setTheme("dark");
+    } else { 
+      setTheme("light");
+    };
   };
 
 

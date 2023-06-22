@@ -1,16 +1,16 @@
 import React from "react";
 import { css } from "@emotion/react";
-import { useSelector } from "react-redux";
+import { useTheme } from "../hooks/useTheme";
 
 
 
 
 export default function ThemeButton({ handleChangeMode }) {
-    const state = useSelector((state) => state);
+    const [theme] = useTheme();
   
     return (
       <button css={modeButtonContainer} onClick={handleChangeMode}>
-        {state ? "🤍" : "🖤"}
+        {theme === "light" ? "🤍" : "🖤"}
       </button>
     );
   }

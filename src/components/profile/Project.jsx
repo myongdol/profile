@@ -10,17 +10,19 @@ import {
   lightBoxShadow,
   darkBoxShadow,
 } from "../../style/main";
+import { useTheme } from "../../hooks/useTheme";
 
 
-export default function Project({state}) {
- 
+export default function Project() {
+
   const fetchUrl = "/data/projectInfoData.json";
   const fetchStorage = "projectInfoData";
   const {dataList: projectList} = useFetch(fetchUrl, fetchStorage);
+  const [theme] = useTheme();
 
 
   return (
-        <article css={projectContainer(state)}>
+        <article css={projectContainer(theme)}>
             <h2>프로젝트 목록</h2>
             <div>
             {projectList.map((item) => (
@@ -46,7 +48,7 @@ export default function Project({state}) {
     )
 }
 
-const projectContainer = (state) => css`
+const projectContainer = (theme) => css`
   margin: 30px 0;
   h2 {
     ${grayTitleBorderBottom};
@@ -63,7 +65,7 @@ const projectContainer = (state) => css`
       overflow: hidden;
       ${contentFontSize16};
       cursor: pointer;
-      box-shadow: ${state ? lightBoxShadow : darkBoxShadow};
+      box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
       &:hover {
