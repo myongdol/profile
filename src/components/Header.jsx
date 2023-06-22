@@ -9,7 +9,7 @@ import {
     darkBackgroundColor,
     lightBackgroundColor
 } from "../style/main";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "../hooks/useTheme";
 
 
 export default function Header() {

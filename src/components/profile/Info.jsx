@@ -15,7 +15,7 @@ import { useTheme } from "../../hooks/useTheme";
 
 
 export default function Info() {
-    const [theme] = useTheme
+    const [theme] = useTheme();
 
     
     return (
