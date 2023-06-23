@@ -1,10 +1,24 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { grayTitleBorderBottom, grayNormalBorderBottom, contentFontSize16, subColor } from "../../style/main";
+import { 
+    grayTitleBorderBottom,
+    contentFontSize16,
+    contentFontSize30,
+    mainColor,
+    subColor,
+    whiteTitleBorderBottom,
+} from "../../style/main";
+import {useTheme} from "../../hooks/useTheme"
+
+
 
 export default function Career () {
+    const [theme] = useTheme();
+
+
+
     return (
-        <article css={careerContainer}>
+        <article css={careerContainer(theme)}>
             <h2>경력</h2>
             <ul>
                 <li>회사</li>
@@ -16,11 +30,11 @@ export default function Career () {
     )
 }
 
-const careerContainer = css`
+const careerContainer = (theme) => css`
     margin: 30px 0;
 
     h2{
-        ${grayTitleBorderBottom};
+        ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom};
     }
 
     ul{
@@ -36,7 +50,7 @@ const careerContainer = css`
 
         li:first-of-type,
         li:nth-of-type(2) {
-            ${grayNormalBorderBottom}
+            background-color: ${mainColor};
             border-radius: 3px;
             font-weight: bold;
         }
