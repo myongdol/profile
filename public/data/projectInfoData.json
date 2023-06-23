@@ -6,7 +6,8 @@
         "period": "2023.06.17 ~ 2023.06.18",
         "techStack": { "id": "1", "name": ["JavaScript"] },
         "repositoryLink": "https://github.com/codestates-seb/seb42_pre_008",
-        "projectImage": "/image/projectImg.jpeg"
+        "projectImage": "/image/projectImg.jpeg",
+        "projectLink": "https://naver.com"
       },
       {
         "id": "2",
@@ -14,7 +15,17 @@
         "period": "2023.06.17 ~ 2023.06.18",
         "techStack": { "id": "2", "name": ["React", "Redux", "Styled-Components", "TypeScript"] },
         "repositoryLink": "https://github.com/codestates-seb/seb42_main_034",
-        "projectImage": "/image/project/ggam.jpg"
+        "projectImage": "/image/project/ggam.jpg",
+        "projectLink": "https://naver.com"
+      },
+      {
+        "id": "3",
+        "name": "🦋여기 와봤니? [팀프로젝트]",
+        "period": "2023.06.17 ~ 2023.06.18",
+        "techStack": { "id": "2", "name": ["React", "Redux", "Styled-Components", "TypeScript"] },
+        "repositoryLink": "https://github.com/codestates-seb/seb42_main_034",
+        "projectImage": "/image/project/ggam.jpg",
+        "projectLink": "https://naver.com"
       }
     ]
   }
