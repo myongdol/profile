@@ -31,7 +31,7 @@ const careerContainer = css`
         padding: 20px;
         
         li {
-            padding: 2px 4px;
+            padding: 4px 6px;
         }
 
         li:first-of-type,
