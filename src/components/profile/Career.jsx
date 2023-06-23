@@ -35,6 +35,7 @@ const careerContainer = (theme) => css`
 
     h2{
         ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom};
+        ${contentFontSize30}
     }
 
     ul{
