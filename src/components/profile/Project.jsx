@@ -39,15 +39,18 @@ export default function Project() {
                 <div>
                   <p>{item.name}</p>
                   <p>{item.period}</p>
-                  <p>프로젝트에 대한 설명</p>
-                  <ul className='tech-stack'>
-                    {item.techStack.name.map((x, index) => (
-                      <li key={`techStack-${index}`}>{x}</li>
-                    ))}
-                  </ul>
-                  <button>
-                    <a href={item.repositoryLink} target="_blank" rel="noreferrer">repository보기</a>
-                  </button>
+                  <p>{item.summary}</p>
+                    <ul className='tech-stack'>
+                      {item.techStack.name.map((x, index) => (
+                        <li key={`techStack-${index}`}>{x}</li>
+                      ))}
+                    </ul>
+                    <div>
+                      <button>구경하기</button>
+                        <button>
+                        <a href={item.repositoryLink} target="_blank" rel="noreferrer">repository보기</a>
+                        </button>
+                    </div>
                 </div>
         
             
@@ -111,9 +114,10 @@ const projectContainer = (theme) => css`
 
       div {
         padding: 20px;
+        position: relative;
 
         p + p {
-          margin: 10px 0;
+          margin: 16px 0;
         }
 
         p:first-of-type {
@@ -129,28 +133,41 @@ const projectContainer = (theme) => css`
         }
 
         p:nth-of-type(3) {
-          ${contentFontSize16}
+          display: flex;
+          align-items: center;
+          height: 80px;
+          line-height: 1.5;
         }
 
-        button {
-          display: block;
-          font-size: 1.5rme;
-          border: none;
-          margin-left: auto;
-          padding: 10px 12px;
-          background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          padding: 0;
 
-          &:hover {
+          button {
+            display: block;
+            font-size: 1.5rme;
+            border: none;
+            margin-left: auto;
+            padding: 10px 12px;
             background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
-            color: ${theme === "light" ? darkFontColor : lightFontColor}
+
+            &:hover {
+              background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
+              color: ${theme === "light" ? darkFontColor : lightFontColor}
+            }
           }
+
         }
 
         .tech-stack {
           align-items: center;
           display: flex;
           gap: 10px;
-          margin: 0 20px;
+          margin: 10px 0 20px;
+          flex-wrap: wrap;
 
           li {
             padding: 3px 6px;
