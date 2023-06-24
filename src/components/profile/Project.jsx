@@ -34,7 +34,15 @@ export default function Project() {
             {projectList.map((item) => (
           <section key={`project-${item.id}`}>
             <a href={item.repositoryLink} target='_blank' rel='noreferrer'>
-                <img src={item.projectImage} alt='project img' />
+                <img 
+                  css={css`
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    object-fit: cover;
+                  `}
+                  src={item.projectImage} alt='project img' 
+                />
             </a>
                 <div>
                   <p>{item.name}</p>
