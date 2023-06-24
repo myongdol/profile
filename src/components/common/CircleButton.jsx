@@ -37,7 +37,7 @@ export default function CircleButton({ className, onClick, children, light, dark
                             return light;
                     }
                     
-                   })}
+                   })()}
                 </>
             )}
             

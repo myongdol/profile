@@ -11,191 +11,141 @@ import {
   whiteTitleBorderBottom,
   lightBoxShadow,
   darkBoxShadow,
-  lightFontColor,
-  darkFontColor,
-  lightNavBackgroundColor,
-  darkNavBackgroundColor,
 } from "../../style/main";
 import { useTheme } from "../../hooks/useTheme";
+import CircleButton from "../common/CircleButton";
 
 
-export default function Project() {
-
+export default function ProjectCard() {
   const fetchUrl = "/data/projectInfoData.json";
   const fetchStorage = "projectInfoData";
-  const {dataList: projectList} = useFetch(fetchUrl, fetchStorage);
   const [theme] = useTheme();
 
+  const { dataList: projectList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-        <article css={projectContainer(theme)}>
-            <h2>프로젝트 목록</h2>
-            <div className="container">
-            {projectList.map((item) => (
+    <article css={projectInfoContainer(theme)}>
+      <h2>프로젝트!!!!!!!!!!</h2>
+      <div className='container'>
+        {projectList.map((item) => (
           <section key={`project-${item.id}`}>
-            <a href={item.repositoryLink} target='_blank' rel='noreferrer'>
-                <img 
-                  css={css`
-                    width: 100%;
-                    height: 100%;
-                    overflow: hidden;
-                    object-fit: cover;
-                  `}
-                  src={item.projectImage} alt='project img' 
-                />
+            <a href={item.projectLink} target='_blank' rel='noreferrer'>
+              <img
+                css={css`
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  overflow: hidden;
+                `}
+                src={item.projectImage}
+                alt=''
+              />
             </a>
-                <div>
-                  <p>{item.name}</p>
-                  <p>{item.period}</p>
-                  <p>{item.summary}</p>
-                    <ul className='tech-stack'>
-                      {item.techStack.name.map((x, index) => (
-                        <li key={`techStack-${index}`}>{x}</li>
-                      ))}
-                    </ul>
-                    <div>
-                      <button>구경하기</button>
-                        <button>
-                        <a href={item.repositoryLink} target="_blank" rel="noreferrer">repository보기</a>
-                        </button>
-                    </div>
-                </div>
-        
-            
+            <div>
+              <div>
+                <CircleButton
+                  onClick={() => {
+                    window.open(item.repositoryLink, "_blank");
+                  }}
+                  light={<img src='/image/icon/github-light-icon.png' alt='' />}
+                  dark={<img src='/image/icon/github-dark-icon.pn' alt='' />}
+                />
+                <CircleButton>•••</CircleButton>
+              </div>
+              <p>{item.name}</p>
+              <p>{item.period}</p>
+              <p>{item.summary}</p>
+              <ul className='tech-stack'>
+                {item.techStack.name.map((x, index) => (
+                  <li key={`techStack-${index}`}>{x}</li>
+                ))}
+              </ul>
+            </div>
           </section>
         ))}
-        </div>
-        </article>
-    )
+      </div>
+    </article>
+  );
 }
 
-
-
-
-const projectContainer = (theme) => css`
+const projectInfoContainer = (theme) => css`
   margin: 30px 0;
-
   h2 {
-    ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom};
+    ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom}
     ${contentFontSize30}
   }
-
   .container {
     margin: 20px 0;
     @media (max-width: 878px) {
       display: grid;
-      gap: 20px;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
     }
-  
-
-
     section {
-      border-radius: 20px;
       display: grid;
-      overflow: hidden;
-      ${contentFontSize16};
       grid-template-columns: 1fr 1fr;
-      box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
-      transition: all 0.3s ease-in-out;
-      transform: translateY(0px);
+      ${contentFontSize16}
+      border-radius: 20px;
+      overflow: hidden;
       margin-top: 20px;
-
-      &:hover {
-        transition: all 0.3s ease-in-out;
-        transform: translateY(-8px);
-      }
-      
+      box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
       @media (max-width: 878px) {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 20px;
         margin: 0;
       }
-
-      img {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        object-fit: cover;
-      }
-
       div {
         padding: 20px;
         position: relative;
-
+        div {
+          display: flex;
+          gap: 10px;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 0;
+        }
         p + p {
           margin: 16px 0;
         }
-
         p:first-of-type {
           font-size: 1.8rem;
           font-weight: bold;
           text-align: center;
         }
-
         p:nth-of-type(2) {
           ${contentFontSize16}
-          text-align: end;
           font-style: italic;
+          text-align: end;
         }
-
         p:nth-of-type(3) {
+          height: 80px;
           display: flex;
           align-items: center;
-          height: 80px;
           line-height: 1.5;
         }
-
-        div {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 10px;
-          padding: 0;
-
-          button {
-            display: block;
-            font-size: 1.5rme;
-            border: none;
-            margin-left: auto;
-            padding: 10px 12px;
-            background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
-
-            &:hover {
-              background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
-              color: ${theme === "light" ? darkFontColor : lightFontColor}
-            }
-          }
-
-        }
-
         .tech-stack {
-          align-items: center;
           display: flex;
+          flex-wrap: wrap;
+          align-items: center;
           gap: 10px;
           margin: 10px 0 20px;
-          flex-wrap: wrap;
-
           li {
+            ${contentFontSize16}
             padding: 3px 6px;
             background-color: ${mainColor};
             color: ${boxTextColor};
             border-radius: 3px;
           }
         }
-
-      }   
+      }
     }
-    
     section:nth-of-type(2n - 1) {
       background-color: rgb(221 221 221 / 16%);
       border: 1px solid rgb(221 221 221 / 16%);
     }
-
     section:nth-of-type(2n) {
-      border: 1px solid ${subColor};
       background-color: ${subColor};
+      border: 1px solid ${subColor};
     }
   }
-  `;
+`;
