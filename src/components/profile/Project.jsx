@@ -11,6 +11,10 @@ import {
   whiteTitleBorderBottom,
   lightBoxShadow,
   darkBoxShadow,
+  lightFontColor,
+  darkFontColor,
+  lightNavBackgroundColor,
+  darkNavBackgroundColor,
 } from "../../style/main";
 import { useTheme } from "../../hooks/useTheme";
 
@@ -133,7 +137,13 @@ const projectContainer = (theme) => css`
           font-size: 1.5rme;
           border: none;
           margin-left: auto;
-          padding: 4px 6px;
+          padding: 10px 12px;
+          background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
+
+          &:hover {
+            background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
+            color: ${theme === "light" ? darkFontColor : lightFontColor}
+          }
         }
 
         .tech-stack {
