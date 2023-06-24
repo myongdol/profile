@@ -3,10 +3,12 @@ import { css } from "@emotion/css";
 import { useFetch } from "../../hooks/useFetch";
 import {
   mainColor,
+  subColor,
   boxTextColor,
   contentFontSize16,
   contentFontSize30,
   grayTitleBorderBottom,
+  whiteTitleBorderBottom,
   lightBoxShadow,
   darkBoxShadow,
 } from "../../style/main";
@@ -24,78 +26,141 @@ export default function Project() {
   return (
         <article css={projectContainer(theme)}>
             <h2>프로젝트 목록</h2>
-            <div>
+            <div className="container">
             {projectList.map((item) => (
-          <React.Fragment key={`project-${item.id}`}>
+          <section key={`project-${item.id}`}>
             <a href={item.repositoryLink} target='_blank' rel='noreferrer'>
-              <section>
-                <img src={item.projectImage} alt='' />
+                <img src={item.projectImage} alt='project img' />
+            </a>
                 <div>
                   <p>{item.name}</p>
                   <p>{item.period}</p>
+                  <p>프로젝트에 대한 설명</p>
                   <ul className='tech-stack'>
                     {item.techStack.name.map((x, index) => (
                       <li key={`techStack-${index}`}>{x}</li>
                     ))}
                   </ul>
+                  <button>
+                    <a href={item.repositoryLink}>repository보기</a>
+                  </button>
                 </div>
-              </section>
-            </a>
-          </React.Fragment>
+        
+            
+          </section>
         ))}
         </div>
         </article>
     )
 }
 
+
+
+
 const projectContainer = (theme) => css`
   margin: 30px 0;
+
   h2 {
-    ${grayTitleBorderBottom};
+    ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom};
     ${contentFontSize30}
   }
-  div {
+
+  .container {
     margin: 20px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    @media (max-width: 878px) {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+  
+
+
     section {
-      border-radius: 10px;
-      border-width: 1.5px;
+      border-radius: 20px;
+      display: grid;
       overflow: hidden;
       ${contentFontSize16};
-      cursor: pointer;
+      grid-template-columns: 1fr 1fr;
       box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
       transition: all 0.3s ease-in-out;
-      transform: translateY(0);
+      transform: translateY(0px);
+      margin-top: 20px;
+
       &:hover {
         transition: all 0.3s ease-in-out;
         transform: translateY(-8px);
       }
+      
+      @media (max-width: 878px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 0;
+      }
+
       img {
         width: 100%;
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
       }
-      p:first-of-type {
-        font-weight: bold;
-        background-color: ${mainColor};
-        display: inline-block;
-      }
-      p {
-        margin: 0 20px;
-      }
+
+      div {
+        padding: 20px;
+
+        p + p {
+          margin: 10px 0;
+        }
+
+        p:first-of-type {
+          font-size: 1.8rem;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        p:nth-of-type(2) {
+          ${contentFontSize16}
+          text-align: end;
+          font-style: italic;
+        }
+
+        p:nth-of-type(3) {
+          ${contentFontSize16}
+        }
+
+        button {
+          display: block;
+          font-size: 1.5rme;
+          border: none;
+          margin-left: auto;
+          padding: 4px 6px;
+        }
+
+        .tech-stack {
+          align-items: center;
+          display: flex;
+          gap: 10px;
+          margin: 0 20px;
+
+          li {
+            padding: 3px 6px;
+            background-color: ${mainColor};
+            color: ${boxTextColor};
+            border-radius: 3px;
+          }
+        }
+
+      }   
+    }
+    
+    section:nth-of-type(2n - 1) {
+      background-color: rgb(221 221 221 / 16%);
+      border: 1px solid rgb(221 221 221 / 16%);
+    }
+
+    section:nth-of-type(2n) {
+      border: 1px solid ${subColor};
+      background-color: ${subColor};
     }
   }
-  .tech-stack {
-    align-items: center;
-    display: flex;
-    gap: 10px;
-    margin: 0 20px;
-    li {
-      padding: 3px 6px;
-      background-color: ${mainColor};
-      color: ${boxTextColor};
-      border-radius: 3px;
-    }
-  }
-  
   `;
