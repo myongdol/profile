@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/react";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "../../hooks/useTheme";
 import { contentFontSize16, contentFontSize30, whiteTitleBorderBottom, grayTitleBorderBottom } from "../../style/main";
 
 
@@ -12,8 +12,8 @@ export default function Introduce() {
             <h2>안녕하세요</h2>
             <section>
                 <p>
-                abcd abcdabcd abcdabcd abcdabcd abcdabcd abcdabcd abcdabcd abcdabcd abcd
-                abcd abcdabcd abcdabcd abcdabcd abcdabcd abcdabcd abcdabcd abcdabcd abcd
+                abcd abcdㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇcd abcd
+                abcd abcdabcd abcdabㄴㅇㄴㅇㅇㅇㅁㄴㄴㄴㅇㅁㅇㅁㅇㅁㅇㅁabcdabcd abcd
                 </p>
             </section>
         </article>
