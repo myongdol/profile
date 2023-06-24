@@ -6,6 +6,7 @@ import Career from "../components/profile/Career";
 import Education from "../components/profile/Education";
 import Project from "../components/profile/Project";
 import TechStacks from "../components/profile/techStacks";
+import Introduce from "../components/profile/Introduce";
 
 
 export default function Profile() {
@@ -14,6 +15,7 @@ export default function Profile() {
     return (
         <main css={profileContainer}>
             <Info/>
+            <Introduce />
             <Career />
             <Education />
             <TechStacks />
