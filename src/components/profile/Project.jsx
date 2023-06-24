@@ -42,7 +42,7 @@ export default function Project() {
                     ))}
                   </ul>
                   <button>
-                    <a href={item.repositoryLink}>repository보기</a>
+                    <a href={item.repositoryLink} target="_blank" rel="noreferrer">repository보기</a>
                   </button>
                 </div>
         
