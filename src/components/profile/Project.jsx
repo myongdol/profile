@@ -103,6 +103,7 @@ const projectInfoContainer = (theme) => css`
           justify-content: flex-end;
           align-items: center;
           padding: 0;
+          margin: 0 0 10px;
         }
         p + p {
           margin: 16px 0;

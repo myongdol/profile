@@ -22,15 +22,20 @@ export default function Info() {
         <article css={infoContainer(theme)}>
             <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
             
-            <h1>Profile | Myongdol</h1>
+            <h1> 김용석 (
+                <a href={URLs.github} target="_blank" rel="noreferrer">
+                    Myongdol
+                </a>
+                )
+                
+            </h1>
 
             <section>
                 <p className="description">
                     <span>😁</span>
                     <span>
-                        프론트엔드 개발자가 되기 위해 노력중인 myongdol 입니다.
-                        <br />
-                        잘 만들어 보자ㅏㅏㅏㅏㅏ
+                        프론트엔드 개발자가 되기 위해 공부를 지속적으로 하고 있습니다 안녕하세요.
+                        반갑습니다.
                     </span>
                 </p>
                 <ul>
@@ -75,6 +80,12 @@ const infoContainer = (theme) => css`
         gap: 30px;
         line-height: 1.5;
         ${contentFontSize16}
+    }
+
+    a {
+        &:hover {
+            color: ${theme === "light" ? "#ffc23a" : "#80869d"}
+        }
     }
 
     p {
