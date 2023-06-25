@@ -11,6 +11,8 @@ import {
     whiteNormalBorderBottom 
 } from "../../style/main";
 import { useTheme } from "../../hooks/useTheme";
+import Hits from "../common/Hits";
+import DateUpdate from "../common/DateUpdate";
 
 
 
@@ -20,7 +22,7 @@ export default function Info() {
     
     return (
         <article css={infoContainer(theme)}>
-            <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
+            <img className='profile' src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
             
             <h1> 김용석 (
                 <a href={URLs.github} target="_blank" rel="noreferrer">
@@ -29,6 +31,10 @@ export default function Info() {
                 )
                 
             </h1>
+
+            <Hits />
+            <DateUpdate yyyymmdd={"20230625"} />
+
 
             <section>
                 <p className="description">
