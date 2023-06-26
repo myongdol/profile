@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { contentFontSize16, contentFontSize30, grayTitleBorderBottom, mainColor, boxTextColor, whiteTitleBorderBottom } from "../../style/main";
+import { contentFontSize16, contentFontSize30, grayTitleBorderBottom, boxTextColor, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/useFetch";
 import { useTheme } from "../../hooks/useTheme";
 
@@ -18,7 +18,18 @@ export default function TechStacks() {
             <ul>
                 {techStackData.map((item) => (
                     <React.Fragment key={`techStack-${item.id}`}>
-                        <li>{item.techStackName}</li>
+                        <li>
+                            <img src={item.techStackImage} alt={item.StackName} />
+                            <div>
+                                <p css={css`font-weight: bold; color: ${boxTextColor};`}>
+                                    {item.techStackName}
+                                </p>
+                                <p>
+                                    {item.techDescription}
+                                </p>
+                            </div>
+                          
+                        </li>
                     </React.Fragment>
                 ))}
             </ul>
@@ -26,24 +37,44 @@ export default function TechStacks() {
     )
 }
 
+
 const techStackContainer = (theme) => css`
     margin: 30px 0;
 
     h2{
-        ${contentFontSize16}
         ${contentFontSize30}
         ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom}
+    }
+
+    ul {
         padding: 20px;
-        display: flex;
-        gap: 10px;
+        gap: 14px;
+        ${contentFontSize16};
         align-items: center;
         flex-wrap: wrap;
-        
-        li{
-            padding: 3px 6px;
-            color: ${boxTextColor};
-            background-color: ${mainColor};
-            border-radius: 3px;
+        line-height: 1.5;
+
+        li {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            gap: 10px;
+            align-items: center;
+            padding: 10px 0;
+
+            img {
+                width: 40px;
+                height: 40px;
+                justify-self: center;
+                object-fit: cover;
+            }
+
+            p {
+                width: 100%;
+            }
+
+            p + p {
+                margin-top: 5px;
+            }
         }
     }
-`
+`;
