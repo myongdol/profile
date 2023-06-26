@@ -22,8 +22,11 @@ export default function Info() {
     
     return (
         <article css={infoContainer(theme)}>
-            <img className='profile' src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
             
+            <div className="profile">
+            <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
+            </div>
+
             <h1> 김용석 (
                 <a href={URLs.github} target="_blank" rel="noreferrer">
                     Myongdol
@@ -67,11 +70,18 @@ export default function Info() {
 }
 
 const infoContainer = (theme) => css`
-    img {
+    div.profile {
+        text-align: center;
         width: 256px;
         height: 256px;
         border-radius: 50%;
+        overflow: hidden;
+        
+    img {
+        height: 100%;
+        object-fit: cover;
     }
+}
     
     h1 {
         font-family: "GangwonEduPowerExtraBoldA";
@@ -141,10 +151,12 @@ const infoContainer = (theme) => css`
     section {
       flex-wrap: wrap;
       justify-content: center;
+
       p.description,
       ul {
         width: 100%;
       }
+
       p.description span:first-of-type {
         margin-top: -4px;
       }
