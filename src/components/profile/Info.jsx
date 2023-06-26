@@ -36,7 +36,7 @@ export default function Info() {
             </h1>
 
             <Hits />
-            <DateUpdate yyyymmdd={"20230626"} />
+            <DateUpdate yyyymmdd={"20230627"} />
 
 
             <section>
@@ -76,7 +76,7 @@ const infoContainer = (theme) => css`
         height: 256px;
         border-radius: 50%;
         overflow: hidden;
-        
+
     img {
         height: 100%;
         object-fit: cover;
