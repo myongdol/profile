@@ -24,7 +24,7 @@ export default function Info() {
         <article css={infoContainer(theme)}>
             
             <div className="profile">
-            <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
+                <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
             </div>
 
             <h1> 김용석 (
@@ -36,7 +36,7 @@ export default function Info() {
             </h1>
 
             <Hits />
-            <DateUpdate yyyymmdd={"20230627"} />
+            <DateUpdate yyyymmdd={"20230628"} />
 
 
             <section>
