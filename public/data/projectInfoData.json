@@ -6,32 +6,6 @@
         "period": "2023.06.17 ~ 2023.06.18",
         "summary" : "부트캠프에서 처음으로 프론트와 백엔드가 만나 진행한 팀 프로젝트 입니다.",
         "techStack": { "id": "1", "name": ["JavaScript, Styled-Components, React"] },
-        "part": [
-            {
-          "id": "1",
-          "title": "login form",
-          "contentList": [
-            {
-              "id": "1",
-              "summary": "로그인, 회원가입 폼을 제작 하였습니다."
-            }
-          ]
-          },
-          {
-            "id": "2",
-            "title": "testDate",
-            "contentList": [
-              {
-                "id": "1",
-                "summary": "테스트용 데이터"
-              },
-             {
-               "id" : "2",
-              "summary": "두번째 데이터"
-            }
-            ]
-          }
-        ],
         "repositoryLink": "https://github.com/codestates-seb/seb42_pre_008",
         "projectImage": "/image/projectImg.jpeg",
         "projectLink": "https://naver.com"

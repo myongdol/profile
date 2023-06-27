@@ -1,0 +1,40 @@
+{
+    "projectDetailsData": [
+        {
+            "id":"1",
+            "name": "🦊Stack Over flow",
+            "period": "2222.22.22 ~ 2222.22.22",
+            "summary": "부트캠프에서 처음으로 프론트와 백엔드가 만나 팀을 이루고 스택오버 플로우를 클론 코딩 하였습니다.",
+            "part": [
+                {
+              "id": "1",
+              "title": "login form",
+              "contentList": [
+                {
+                  "id": "1",
+                  "summary": "로그인, 회원가입 폼을 제작 하였습니다."
+                }
+              ]
+              },
+              {
+                "id": "2",
+                "title": "testDate",
+                "contentList": [
+                  {
+                    "id": "1",
+                    "summary": "테스트용 데이터"
+                  },
+                 {
+                   "id" : "2",
+                  "summary": "두번째 데이터"
+                }
+                ]
+              }
+            ],
+            "techStack": { "id": "1", "name": ["JavaScript, Styled-Components, React"] },
+            "repositoryLink": "https://github.com/codestates-seb/seb42_pre_008",
+            "projectImage": "/image/projectImg.jpeg",
+            "projectLink": "https://naver.com"
+        }
+    ]
+}
