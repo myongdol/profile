@@ -14,6 +14,7 @@ import {
 } from "../../style/main";
 import { useTheme } from "../../hooks/useTheme";
 import CircleButton from "../common/CircleButton";
+import { Link } from "react-router-dom";
 
 
 export default function ProjectCard() {
@@ -50,7 +51,9 @@ export default function ProjectCard() {
                   light={<img src='/image/icon/github-light-icon.png' alt='' />}
                   dark={<img src='/image/icon/github-dark-icon.pn' alt='' />}
                 />
-                <CircleButton>•••</CircleButton>
+                  <Link to='/portfolio' target='_blank'>
+                     <CircleButton>ㅁ</CircleButton>
+                  </Link>
               </div>
               <p>{item.name}</p>
               <p>{item.period}</p>

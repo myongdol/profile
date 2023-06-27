@@ -25,6 +25,9 @@ export default function Header() {
                 <li>
                     <NavLink to='/profile'>Profile</NavLink>
                 </li>
+                <li>
+                    <NavLink to='/portfolio'>Portfolio</NavLink>
+                </li>
             </ul>
         </nav>
     )
