@@ -93,7 +93,7 @@ const infoContainer = (theme) => css`
     section {
         display: flex;
         justify-content: space-between;
-        gap: 30px;
+        gap: 10px;
         line-height: 1.5;
         ${contentFontSize16}
     }
@@ -117,14 +117,16 @@ const infoContainer = (theme) => css`
     }
 
     .description{
-        display: flex;
         width: 60%;
-        align-items: center;
-        gap: 10px;
+        display: flex;
+        border-left-width: 100px;
+        border-left-color: ${theme === "light" ? grayBorder : whiteBorder};
+        border-left-style: solid;
+        padding: 10px 20px;
+        font-weight: 600;
         
         span:first-of-type {
             height: 100%;
-            margin-top: 14px;
         }
     }
 
