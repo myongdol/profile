@@ -17,8 +17,16 @@ export default function Education() {
         <article css={educationContainer(theme)}>
             <h2>교육 관련 내용</h2>
             <ul>
+              <li>과정</li>
+              <li>교육기간</li>
+              <li>수료증</li>
                {educationList.map((item) => (
                 <React.Fragment key={`education-${item.id}`}>
+                  <li>
+                    <a href={item.site} target="_blank" rel="noreferrer">
+                      {item.course}
+                    </a>
+                  </li>
                     <li>{item.course}</li>
                     <li>{item.period}</li>
                 </React.Fragment>
