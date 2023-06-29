@@ -3,17 +3,23 @@
         {
             "id" : 1,
             "course": "유데미 강의",
-            "period": "2023.06.17~2023.06.17"
+            "period": "2023.06.17~2023.06.17",
+            "site": "https://www.naver.com",
+            "certificates": "https://www.naver.com" 
         },
         {
             "id" : 2,
             "course": "유데미 강의",
-            "period":"2023.06.18~2023.06.18"
+            "period":"2023.06.18~2023.06.18",
+            "site": "https://www.naver.com",
+            "certificates": "https://www.naver.com" 
         },
         {
             "id" : 3,
             "course": "부트캠프 코드스테이츠",
-            "period":"2022.06.18~2023.06.18"
+            "period":"2022.06.18~2023.06.18",
+            "site": "https://www.naver.com",
+            "certificates": "https://www.naver.com" 
         }
     ]
 }
