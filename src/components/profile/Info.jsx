@@ -76,10 +76,11 @@ const infoContainer = (theme) => css`
     height: 256px;
     border-radius: 50%;
     overflow: hidden;
+    border: 1px solid;
 
     img {
       object-fit: cover;
-      height: 100%;
+      width: 100%;
     }
   }
 
@@ -112,6 +113,10 @@ const infoContainer = (theme) => css`
     width: 60%;
     display: flex;
     gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
     span:first-of-type {
       height: 100%;
     }
