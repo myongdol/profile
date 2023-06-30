@@ -27,4 +27,14 @@ body {
     color: ${theme === "light" ? lightFontColor : darkFontColor};
     font-family: Nanum Gothic;
 }
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+}
+
 `;
