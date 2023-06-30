@@ -13,7 +13,6 @@ import {
 } from "../../style/main";
 import { useTheme } from "../../hooks/useTheme";
 import CircleButton from "../common/CircleButton";
-import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 
