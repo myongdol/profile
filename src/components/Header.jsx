@@ -25,8 +25,15 @@ export default function Header() {
                 <li>
                     <NavLink to='/profile'>Profile</NavLink>
                 </li>
-                <li>
-                    <NavLink to='/portfolio'>Portfolio</NavLink>
+                <li className="github_repository_link">
+                    <button className="github_repository_button" onClick={() => { window.open("https://github.com/myongdol/profile", "_blank")}}>
+                        {theme === "light" ? (
+                            <img src="image/icon/github-light-icon.png" alt=''/>
+                        ) : (
+                            <img src="image/icon/github-dark-icon.png" alt='' />
+                        )}
+                    </button>
+
                 </li>
             </ul>
         </nav>
@@ -68,6 +75,20 @@ const headerContainer = (theme) => css`
 
         li + li {
             margin-left: 6px;
+        }
+
+        li.github_repository_link {
+            padding: 8px 16px;
+            margin-left: auto;
+            align-self: flex-end;
+
+            button {
+                cursor: pointer;
+            }
+
+            img {
+                vertical-align: bottom;
+            }
         }
 
     a{
