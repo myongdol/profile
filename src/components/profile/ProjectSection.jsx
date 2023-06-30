@@ -73,7 +73,7 @@ export default function ProjectSection() {
                 ))}
               </ProjectSummary>
               <TechStackContainer>
-                {item.teckStack.name.map((x, index) => (
+                {item.techStack.name.map((x, index) => (
                   <li key={`techStack-${index}`}>{x}</li>
                 ))}
               </TechStackContainer>
