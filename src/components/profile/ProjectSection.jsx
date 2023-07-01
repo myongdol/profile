@@ -55,7 +55,9 @@ export default function ProjectSection() {
                   light={<img src='/images/icons/github-light-icon.png' alt='' />}
                   dark={<img src='/images/icons/github-dark-icon.png' alt='' />}
                 />
-                <CircleButton>📜</CircleButton>
+                <CircleButton>
+                  <img src="/image/icon/notion-icon.svg" alt="notion" />
+                </CircleButton>
               </div>
               <a href={item.projectLink} target='_blank' rel='noreferrer'>
                 <CircleButton type='button' className='themore-button'>
