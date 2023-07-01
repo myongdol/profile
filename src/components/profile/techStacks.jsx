@@ -3,7 +3,7 @@ import { css } from "@emotion/css";
 import { contentFontSize16, contentFontSize30, grayTitleBorderBottom, boxTextColor, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/useFetch";
 import { useTheme } from "../../hooks/useTheme";
-
+import { parseBoldString } from "../../js/ParseBoldString";
 
 
 export default function TechStacks() {
@@ -25,7 +25,13 @@ export default function TechStacks() {
                                     {item.techStackName}
                                 </p>
                                 <p>
-                                    {item.techDescription}
+                                    {parseBoldString(item.techDescription).map((x, i) => {
+                                        if (x.startsWith("**")) {
+                                            return <strong key={`${i}-${x}`}>{x.slice(2)}</strong>
+                                        } else {
+                                            return <span key ={`${i}-${x}`}>{x}</span>
+                                        }
+                                    })}
                                 </p>
                             </div>
                           

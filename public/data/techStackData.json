@@ -4,31 +4,31 @@
             "id": 1,
             "techStackName": "HTML",
             "techStackImage": "/image/techStack/html-img.png",
-            "techDescription": "필요한 시멘틱 태그를 사용하여 구조적 문서를 만드는것에 능숙합니다."
+            "techDescription": "필요한 시멘틱 태그를 사용하여 **구조적 문서**를 만드는것에 능숙합니다."
         },
         {
             "id": 2,
             "techStackName": "CSS",
             "techStackImage": "/image/techStack/css-img.png",
-            "techDescription": "아직은 조금 부족 하지만 어떻게 하면 ui/ux가 더 나아지고 좋아질지 고민하는 것을 좋아합니다."
+            "techDescription": "아직은 조금 부족 하지만 어떻게 하면 **ui/ux가 더 나아지고 좋아질지 고민**하는 것을 좋아합니다."
         },
         {
             "id": 3,
             "techStackName": "JavaScript",
             "techStackImage": "/image/techStack/js-img.png",
-            "techDescription": "es6 문법을 사용하는 것에 익숙하며 동작원리를 이해하고 있습니다."
+            "techDescription": "es6 문법을 사용하는 것에 익숙하며 **동작원리를 이해**하고 있습니다."
         },
         {
             "id": 4,
             "techStackName": "React",
             "techStackImage": "/image/techStack/react-img.png",
-            "techDescription": "컴포넌트 단위로 개발하는 것에 익숙하며 기본적인 hook 사용이 능숙하고 커스텀 훅을 제작하여 사용합니다."
+            "techDescription": "**컴포넌트 단위로 개발하는 것에 익숙**하며 기본적인 hook 사용이 능숙하고 커스텀 훅을 제작하여 사용합니다."
         },
         {
             "id": 5,
             "techStackName": "Redux",
             "techStackImage": "/image/techStack/redux-img.png",
-            "techDescription": "Redux를 통한 전역상태 관리 및 flux 패턴의 기본 동작원리를 이해하고 있습니다."
+            "techDescription": "Redux를 통한 전역상태 관리 및 flux 패턴의 **기본 동작원리를 이해**하고 있습니다."
         },
         {
             "id": 6,
