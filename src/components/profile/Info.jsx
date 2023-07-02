@@ -36,7 +36,7 @@ export default function Info() {
             </h1>
 
             <Hits />
-            <DateUpdate yyyymmdd={"20230701"} />
+            <DateUpdate yyyymmdd={"20230702"} />
 
 
             <section>
@@ -116,6 +116,7 @@ const infoContainer = (theme) => css`
     display: flex;
     align-items: center;
     flex-direction: row;
+    word-break: keep-all;
 
     span:first-of-type {
       height: 100%;
