@@ -76,7 +76,6 @@ const infoContainer = (theme) => css`
     height: 256px;
     border-radius: 50%;
     overflow: hidden;
-    border: 1px solid;
 
     img {
       object-fit: cover;
