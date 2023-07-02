@@ -68,7 +68,7 @@ export default function ProjectSection() {
 
             <ProjectCardTextContainer>
               <ProjectName>{item.name}</ProjectName>
-              <ProjectPeriod>{item.period}</ProjectPeriod>
+              <ProjectPeriod>프로젝트 진행기간 : {item.period}</ProjectPeriod>
               <ProjectSummary>
                 {putNewline(item.summary).map((summary, index) => (
                   <p key={`summary-${index}`}>{summary}</p>
