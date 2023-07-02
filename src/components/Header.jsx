@@ -10,6 +10,7 @@ import {
     lightBackgroundColor
 } from "../style/main";
 import { useTheme } from "../hooks/useTheme";
+import { GithubIcon } from "./profile/GithubIcon";
 
 
 export default function Header() {
@@ -26,12 +27,8 @@ export default function Header() {
                     <NavLink to='/profile'>Profile</NavLink>
                 </li>
                 <li className="github_repository_link">
-                    <button className="github_repository_button" onClick={() => { window.open("https://github.com/myongdol/profile", "_blank")}}>
-                        {theme === "light" ? (
-                            <img src="image/icon/github-light-icon.png" alt=''/>
-                        ) : (
-                            <img src="image/icon/github-dark-icon.png" alt='' />
-                        )}
+                    <button onClick={() => { window.open("https://github.com/myongdol/profile", "_blank")}}>
+                        <GithubIcon />
                     </button>
 
                 </li>
@@ -39,6 +36,10 @@ export default function Header() {
         </nav>
     )
 }
+
+
+
+
 
 const headerContainer = (theme) => css`
     font-family: "GangwonEduPowerExtraBoldA";
@@ -84,10 +85,8 @@ const headerContainer = (theme) => css`
 
             button {
                 cursor: pointer;
-            }
-
-            img {
-                vertical-align: bottom;
+                height: 30px;
+                width: 30px;
             }
         }
 
