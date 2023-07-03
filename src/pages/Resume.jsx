@@ -1,16 +1,16 @@
 import React from "react";
 import { css } from "@emotion/css";
 import { mainSection } from "../style/main";
-import Info from "../components/profile/Info";
-import Career from "../components/profile/Career";
-import Education from "../components/profile/Education";
-import ProjectSection from "../components/profile/ProjectSection";
-import TechStacks from "../components/profile/techStacks";
-import Introduce from "../components/profile/Introduce";
+import Info from "../components/Resume/Info";
+import Career from "../components/Resume/Career";
+import Education from "../components/Resume/Education";
+import ProjectSection from "../components/Resume/ProjectSection";
+import TechStacks from "../components/Resume/techStacks";
+import Introduce from "../components/Resume/Introduce";
 
 
 
-export default function Profile() {
+export default function Resume() {
 
 
     return (

@@ -10,7 +10,7 @@ import {
     lightBackgroundColor
 } from "../style/main";
 import { useTheme } from "../hooks/useTheme";
-import { GithubIcon } from "./profile/GithubIcon";
+import { GithubIcon } from "./Resume/GithubIcon";
 
 
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
                     <NavLink to='/'>HOME</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/profile'>Profile</NavLink>
+                    <NavLink to='/resume'>Resume</NavLink>
                 </li>
                 <li className="github_repository_link">
                     <button onClick={() => { window.open("https://github.com/myongdol/profile", "_blank")}}>
