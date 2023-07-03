@@ -7,7 +7,17 @@ import Education from "../components/Resume/Education";
 import ProjectSection from "../components/Resume/ProjectSection";
 import TechStacks from "../components/Resume/techStacks";
 import Introduce from "../components/Resume/Introduce";
+import { ResumeComponent } from "../components/ResumeComponent";
 
+
+const defaultArray = [
+    "Info",
+    "Introduce",
+    "Career",
+    "TechStack",
+    "Education",
+    "ProjectSection",
+]
 
 
 export default function Resume() {
@@ -15,12 +25,9 @@ export default function Resume() {
 
     return (
         <main css={profileContainer}>
-            <Info/>
-            <Introduce />
-            <Career />
-            <Education />
-            <TechStacks />
-            <ProjectSection/>
+           {defaultArray.map((x) => (
+            <ResumeComponent key={x} name={x} />
+           ))}
         </main>
     );
 }
