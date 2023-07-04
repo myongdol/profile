@@ -5,7 +5,7 @@ import { useFetch } from "../../hooks/useFetch";
 import { useTheme } from "../../hooks/useTheme";
 
 
-export function Education() {
+export default function Education() {
     const fetchUrl = "/data/educationData.json";
     const fetchStorage = "educationData";
 

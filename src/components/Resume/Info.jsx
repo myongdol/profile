@@ -15,7 +15,7 @@ import {DateUpdate} from "../common/DateUpdate";
 
 
 
-export function Info() {
+export default function Info() {
     const [theme] = useTheme();
 
     

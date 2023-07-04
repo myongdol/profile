@@ -15,7 +15,7 @@ import {CircleButton} from "../common/CircleButton";
 import styled from "@emotion/styled";
 
 
-export function ProjectSection() {
+export default function ProjectSection() {
   const fetchUrl = "/data/projectInfoData.json";
   const fetchStorage = "projectInfoData";
   const [theme] = useTheme();
