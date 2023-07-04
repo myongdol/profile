@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { contentFontSize16, contentFontSize30, grayTitleBorderBottom, boxTextColor, whiteTitleBorderBottom } from "../../style/main";
+import { fontSize, grayTitleBorderBottom, boxTextColor, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/useFetch";
 import { useTheme } from "../../hooks/useTheme";
 import { parseBoldString } from "../../js/ParseBoldString";
@@ -48,14 +48,14 @@ const techStackContainer = (theme) => css`
     margin: 30px 0;
 
     h2{
-        ${contentFontSize30}
+        ${fontSize.contentFontSize30}
         ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom}
     }
 
     ul {
         padding: 20px;
         gap: 14px;
-        ${contentFontSize16};
+        ${fontSize.contentFontSize16};
         align-items: center;
         flex-wrap: wrap;
         line-height: 1.5;

@@ -4,8 +4,7 @@ import { useFetch } from "../../hooks/useFetch";
 import {
   mainColor,
   boxTextColor,
-  contentFontSize16,
-  contentFontSize30,
+  fontSize,
   grayTitleBorderBottom,
   whiteTitleBorderBottom,
   lightBoxShadow,
@@ -92,7 +91,7 @@ const projectInfoContainer = (theme) => css`
 
   h2 {
     ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom}
-    ${contentFontSize30}
+    ${fontSize.contentFontSize30}
   }
   `;
   
@@ -110,7 +109,7 @@ const projectInfoContainer = (theme) => css`
 
 const ProjectCard = styled.section`
   position: relative;
-  ${contentFontSize16}
+  ${fontSize.contentFontSize16}
   border-radius: 3px;
   overflow: hidden;
   box-shadow: ${(props) => (props.theme === "light" ? lightBoxShadow : darkBoxShadow)};

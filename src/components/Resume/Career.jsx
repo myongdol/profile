@@ -2,8 +2,7 @@ import React from "react";
 import { css } from "@emotion/css";
 import { 
     grayTitleBorderBottom,
-    contentFontSize16,
-    contentFontSize30,
+    fontSize,
     mainColor,
     subColor,
     whiteTitleBorderBottom,
@@ -35,14 +34,14 @@ const careerContainer = (theme) => css`
 
     h2{
         ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom};
-        ${contentFontSize30}
+        ${fontSize.contentFontSize30}
     }
 
     ul{
         display: grid;
         gap: 15px;
         grid-template-columns: 2fr 1fr;
-        ${contentFontSize16}
+        ${fontSize.contentFontSize16}
         padding: 20px;
         
         li {

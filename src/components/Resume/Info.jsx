@@ -2,8 +2,7 @@ import React from "react";
 import { css } from "@emotion/css";
 import { URLs } from "../../constant";
 import { 
-    contentFontSize16,
-    contentFontSize40,
+    fontSize,
     mainColor,
     grayBorder,
     grayNormalBorderBottom,
@@ -87,7 +86,7 @@ const infoContainer = (theme) => css`
     font-family: "GangwonEduPowerExtraBoldA";
     letter-spacing: 2px;
     margin: 40px 0;
-    ${contentFontSize40};
+    ${fontSize.contentFontSize40};
     a {
       &:hover {
         color: ${theme === "light" ? "#ffc23a" : "#80879d"};
@@ -100,7 +99,7 @@ const infoContainer = (theme) => css`
     justify-content: space-between;
     gap: 10px;
     line-height: 1.5;
-    ${contentFontSize16};
+    ${fontSize.contentFontSize16};
   }
 
   .description {

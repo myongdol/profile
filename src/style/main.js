@@ -69,15 +69,16 @@ export const whiteBorder = css`
 
 // 폰트 사이즈
 
-export const contentFontSize16 = css`
+export const fontSize = {
+    contentFontSize16: css`
     font-size: 1.6rem;
-`
-
-export const contentFontSize30 = css`
+    `,
+    contentFontSize30: css`
     font-size: 3rem;
-`
-
-export const contentFontSize40 = css`
+    `,
+    contentFontSize40: css`
     font-size: 4rem;
-`
+    `,
+
+}
 

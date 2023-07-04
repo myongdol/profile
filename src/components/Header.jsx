@@ -2,8 +2,8 @@ import React from "react";
 import { css } from "@emotion/css";
 import { NavLink } from "react-router-dom";
 import { 
-    contentFontSize16,
-     mainColor,
+    fontSize,
+    mainColor,
     darkNavBackgroundColor,
     lightNavBackgroundColor,
     darkBackgroundColor,
@@ -55,7 +55,7 @@ const headerContainer = (theme) => css`
         align-items: center;
         justify-content: start;
         gap: 100px;
-        ${contentFontSize16}
+        ${fontSize.contentFontSize16}
         border: 1px solid;
         max-width: 1200px;
         margin: 16px 0px 0 16px;

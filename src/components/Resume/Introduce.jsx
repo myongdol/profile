@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 import { useTheme } from "../../hooks/useTheme";
-import { contentFontSize16, contentFontSize30, whiteTitleBorderBottom, grayTitleBorderBottom } from "../../style/main";
+import { fontSize, whiteTitleBorderBottom, grayTitleBorderBottom } from "../../style/main";
 
 
 export default function Introduce() {
@@ -34,12 +34,12 @@ const introduceContainer = (theme) => css`
 
     h2 {
         ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom}
-        ${contentFontSize30}
+        ${fontSize.contentFontSize30}
     }
     
     section {
         margin: 20px;
-        ${contentFontSize16}
+        ${fontSize.contentFontSize16}
         line-height: 1.5;
 
         p span {

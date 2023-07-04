@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { contentFontSize16, contentFontSize30, mainColor, subColor, grayTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";
+import { fontSize, mainColor, subColor, grayTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/useFetch";
 import { useTheme } from "../../hooks/useTheme";
 
@@ -49,7 +49,7 @@ const educationContainer = (theme) => css`
   margin: 30px 0;
 
   h2 {
-    ${contentFontSize30}
+    ${fontSize.contentFontSize30}
     ${theme === "light" ? grayTitleBorderBottom : whiteTitleBorderBottom};
   }
 
@@ -58,7 +58,7 @@ const educationContainer = (theme) => css`
     display: grid;
     grid-template-columns: 1fr 1fr 60px;
     gap: 5px 10px;
-    ${contentFontSize16};
+    ${fontSize.contentFontSize16};
     overflow: scroll;
   }
 
