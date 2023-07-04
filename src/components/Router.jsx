@@ -1,23 +1,31 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Resume from "../pages/Resume";
 import Home from "../pages/Home";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useLocation } from "react-router-dom";
+import Portfolio from "../pages/Portfolio";
+
 
 export default function Router() {
-    const {pathname} = useLocation();
-
+    const { pathname } = useLocation();
     useEffect(() => {
-        window.scrollTo(0, 0);
-        console.log("scroll up, router.jsx")
-    }, [pathname])
+      window.scrollTo(0, 0);
+    }, [pathname]);
 
-    
-    return ( 
-        <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path="/resume" element={<Resume/>} />
-        </Routes>
-    )
-}
+    return (
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/profile' element={<Navigate to='/resume' replace={true} />} />
+        <Route
+          path='/resume'
+          element={
+            <Suspense fallback={<>로딩 중</>}>
+              <Resume />
+            </Suspense>
+          }
+        />
+        <Route path='/portfolio' element={<Portfolio />} />
+      </Routes>
+    );
+};
