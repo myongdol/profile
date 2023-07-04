@@ -1,0 +1,39 @@
+import { css } from "@emotion/react";
+import { URLs } from "../../constant";
+import { fontSize } from "../../style/main";
+import { useTheme } from "../../hooks/useTheme";
+
+
+
+export default function Name() {
+  const [theme] = useTheme();
+
+  return (
+    <article css={infoContainer(theme)}>
+      <h1>
+        김용석 (
+        <a href={URLs.github} target='_blank' rel='noreferrer'>
+          Myongdol
+        </a>
+        )
+      </h1>
+    </article>
+  );
+}
+
+
+
+
+const infoContainer = (theme) => css`
+  h1 {
+    font-family: "GangwonEduPowerExtraBoldA";
+    letter-spacing: 2px;
+    margin: 40px 0;
+    ${fontSize.contentFontSize40};
+    a {
+      &:hover {
+        color: ${theme === "light" ? "#ffc23a" : "#80879d"};
+      }
+    }
+  }
+`;
