@@ -36,7 +36,7 @@ export default function Info() {
             </h1>
 
             <Hits />
-            <DateUpdate yyyymmdd={"20230703"} />
+            <DateUpdate yyyymmdd={"20230704"} />
 
 
             <section>
