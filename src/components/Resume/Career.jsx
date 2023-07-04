@@ -11,7 +11,7 @@ import {useTheme} from "../../hooks/useTheme"
 
 
 
-export default function Career () {
+export function Career () {
     const [theme] = useTheme();
 
 

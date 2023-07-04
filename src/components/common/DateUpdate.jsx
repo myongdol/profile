@@ -1,4 +1,4 @@
-export default function DateUpdate({yyyymmdd}) {
+export function DateUpdate({yyyymmdd}) {
     return (
         <div className="date-update" style={{textAlign: "right"}}> 
             업데이트 : {YYYY_MM_DD(yyyymmdd)}

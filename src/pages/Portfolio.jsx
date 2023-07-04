@@ -1,10 +1,10 @@
 import { css } from "@emotion/react";
 import { mainSection } from "../style/main";
 import { useMoveScroll } from "../hooks/useMoveScroll";
-import ProjectPart from "../components/portfolio/ProjectPart";
+import {ProjectPart} from "../components/portfolio/ProjectPart";
 import {useFetch} from "../hooks/useFetch";
 
-export default function Portfolio() { 
+export function Portfolio() { 
 
     const menuText = ["🦊Stack Over Flow", "클론코딩 팀 프로젝트"];
     const {elementRef: menuRef, onMoveElement: onMoveToMenu} = useMoveScroll(menuText);

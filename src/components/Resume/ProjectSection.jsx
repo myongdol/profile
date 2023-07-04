@@ -11,11 +11,11 @@ import {
   darkBoxShadow,
 } from "../../style/main";
 import { useTheme } from "../../hooks/useTheme";
-import CircleButton from "../common/CircleButton";
+import {CircleButton} from "../common/CircleButton";
 import styled from "@emotion/styled";
 
 
-export default function ProjectSection() {
+export function ProjectSection() {
   const fetchUrl = "/data/projectInfoData.json";
   const fetchStorage = "projectInfoData";
   const [theme] = useTheme();

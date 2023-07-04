@@ -5,7 +5,7 @@ import { useTheme } from "../hooks/useTheme";
 
 
 
-export default function ThemeButton({ handleChangeMode }) {
+export function ThemeButton({ handleChangeMode }) {
     const [theme] = useTheme();
   
     return (

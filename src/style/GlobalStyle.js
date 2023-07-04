@@ -5,7 +5,7 @@ import { useTheme } from "../hooks/useTheme";
 
 
 
-export default function GlobalStyle() {
+export function GlobalStyle() {
     const [theme] = useTheme();
 
     return <Global styles={style(theme)} /> 

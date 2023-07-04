@@ -13,7 +13,7 @@ import { useTheme } from "../hooks/useTheme";
 import { GithubIcon } from "./Resume/GithubIcon";
 
 
-export default function Header() {
+export function Header() {
     const [theme] = useTheme();
 
 

@@ -1,12 +1,12 @@
 import React from "react";
-import MotionImage from "../components/homepage/MotionImage";
+import { LandingPage } from "../components/homepage/LandingPage";
 
 
-export default function Home() {
+export function Home() {
 
     return (
         <section>
-            <MotionImage />
+            <LandingPage />
         </section>
     )
 }

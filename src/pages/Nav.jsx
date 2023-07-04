@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { css } from "@emotion/css";
 
-export default function Nav() {
+export function Nav() {
     return (
         <nav css={navContainer} >
             <li> 

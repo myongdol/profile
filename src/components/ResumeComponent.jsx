@@ -16,5 +16,9 @@ export const ResumeComponentMap = {
   export const ResumeComponent = ({ name }) => {
     const Component = ResumeComponentMap[name];
   
+    if (Component == null) {
+      return <></>;
+    }
+  
     return <Component />;
   };

@@ -4,7 +4,7 @@ import { useTheme } from "../../hooks/useTheme";
 import { fontSize, whiteTitleBorderBottom, grayTitleBorderBottom } from "../../style/main";
 
 
-export default function Introduce() {
+export function Introduce() {
      const [theme] = useTheme();
 
      return (

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "./Image";
 import { motion, useScroll, useSpring } from "framer-motion";
 
-export default function MotionImage() {
+export function MotionImage() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,

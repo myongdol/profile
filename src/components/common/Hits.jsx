@@ -1,4 +1,4 @@
-export default function Hits({url = window.location.href}) {
+export function Hits({url = window.location.href}) {
     const encodeUrl = encodeURIComponent(url);
 
     return ( 

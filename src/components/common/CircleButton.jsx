@@ -9,7 +9,7 @@ import { darkFontColor,
 } from "../../style/main";
 
 
-export default function CircleButton({ className, onClick, children, light, dark}) {
+export function CircleButton({ className, onClick, children, light, dark}) {
     const [theme] = useTheme();
     const [hover, setHover] = useState(false);
 
