@@ -27,10 +27,9 @@ export function Header() {
                     <NavLink to='/resume'>Resume</NavLink>
                 </li>
                 <li className="github_repository_link">
-                    <button onClick={() => { window.open("https://github.com/myongdol/profile", "_blank")}}>
+                    <a href='https://github.com/myongdol/profile' target="_blank" rel="noreferrer">
                         <GithubIcon />
-                    </button>
-
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -54,10 +53,7 @@ const headerContainer = (theme) => css`
         display: flex;
         align-items: center;
         justify-content: start;
-        gap: 100px;
         ${fontSize.contentFontSize16}
-        border: 1px solid;
-        max-width: 1200px;
         margin: 16px 0px 0 16px;
     }
     
@@ -68,7 +64,7 @@ const headerContainer = (theme) => css`
             background-color: ${mainColor};
             box-shadow: none;
         }
-        &:active{
+        .active{
             background-color: ${theme ? lightBackgroundColor : darkBackgroundColor};
         }
     }
@@ -78,20 +74,23 @@ const headerContainer = (theme) => css`
         }
 
         li.github_repository_link {
-            padding: 8px 16px;
             margin-left: auto;
             align-self: flex-end;
 
-            button {
-                cursor: pointer;
-                height: 30px;
-                width: 30px;
+            a {
+                display: block;
+                padding: 10px 12px;
+                
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
 
-    a{
+    a:not(li.github_repository_link a){
         display: inline-block;
         padding: 10px 20px;
         border-radius: 10px 10px 0 0;
     }
-`
+`;
