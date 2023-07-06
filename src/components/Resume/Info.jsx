@@ -20,7 +20,7 @@ export default function Info() {
 
     
     return (
-        <article css={infoContainer(theme)}>
+        <article name='Info' css={infoContainer(theme)}>
             
             <div className="profile">
                 <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
