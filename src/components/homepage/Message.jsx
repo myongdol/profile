@@ -2,12 +2,17 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styled from "@emotion/styled";
 
+
+const LAST_PAGE = 4;
+
 function useParallax(value, distance) {
   console.log({ value });
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-export function Message({ text, onViewportEnter, onViewportLeave }) {
+
+
+export function Message({ text, onViewportEnter, onViewportLeave, index }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
@@ -26,6 +31,11 @@ export function Message({ text, onViewportEnter, onViewportLeave }) {
       >
         {`${text}`}
       </H2>
+      {LAST_PAGE === index && (
+          <ResumLink>
+            <a href="/resume">Enter</a>
+          </ResumLink>
+        )}
     </Container>
   );
 }
@@ -42,7 +52,7 @@ const Container = styled.section`
   position: relative;
   scroll-snap-align: center;
   perspective: 500px;
-  @media (max-width: 953px) {
+  @media (max-width: 1180px) {
     h2 {
       left: 0;
       right: 0;
@@ -62,3 +72,29 @@ const H2 = styled(motion.h2)`
   letter-spacing: 2px;
   line-height: 1.2;
 `;
+
+const ResumLink = styled.div`
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  a {
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: #fff;
+    background-color: #bebaba78;
+    cursor: pointer;
+    font-size: 2.8rem;
+    letter-spacing: 0.1em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #c8c8c8c8;
+      transform: scale(1.1);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+` 
