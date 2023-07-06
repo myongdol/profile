@@ -18,8 +18,8 @@ export function Resume() {
         <h1>Not Found</h1>
       </div>
     );
-  }
-
+  } 
+  
   return (
     <main css={resumeContainer(type)}>
       {components.map((x, index) => (
