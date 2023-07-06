@@ -1,3 +1,4 @@
+import { GreetingLog } from "./components/GreetingLog";
 import {Header} from "./components/Header";
 import {ThemeButton} from "./components/ThemeButton";
 import { useTheme } from "./hooks/useTheme";
@@ -19,6 +20,7 @@ export function App() {
     <>
       <Header />
       <ThemeButton handleChangeMode={handleChangeMode} />
+      <GreetingLog />
     </>
     )
 }

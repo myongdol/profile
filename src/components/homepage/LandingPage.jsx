@@ -28,7 +28,6 @@ export function LandingPage() {
       </Image>
       
       {scrollText.map((item, index) => (
-        <>
         <Message
           index={index}
           key={`${item.id}`}
@@ -39,7 +38,6 @@ export function LandingPage() {
             setStep(item.id);
           }}
         />
-        </>
       ))}
       
     </div>
