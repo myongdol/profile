@@ -14,7 +14,7 @@ export default function Education() {
 
 
     return (
-        <article css={educationContainer(theme)}>
+        <article name='Education' css={educationContainer(theme)}>
             <h2>교육 관련 내용</h2>
             <ul>
               <li>과정</li>

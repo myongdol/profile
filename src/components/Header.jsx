@@ -15,10 +15,20 @@ import { GithubIcon } from "./Resume/GithubIcon";
 
 export function Header() {
     const [theme] = useTheme();
+    const title = window.document.title;
+
+    const downloadResumePdf = () => {
+    window.addEventListener("afterprint", ()=> {
+        window.document.title = title;
+    });
+
+    window.document.title = " ";
+    window.print();
+    }
 
 
     return (
-        <nav css={headerContainer(theme)}>
+        <nav css={headerContainer(theme)} className='no-print'>
             <ul>
                 <li>
                     <NavLink to='/'>HOME</NavLink>
@@ -26,7 +36,19 @@ export function Header() {
                 <li>
                     <NavLink to='/resume'>Resume</NavLink>
                 </li>
-                <li className="github_repository_link">
+                <li style={{ marginLeft: "auto" }}>
+                    <button
+                        css={css`
+                        padding: 16px;
+                        cursor: pointer;
+                        `}
+                        onClick={downloadResumePdf}
+                    >
+                        Enter
+                    </button>
+                </li>
+
+                <li className='github-repository-link' style={{ marginLeft: "10px" }}>
                     <a href='https://github.com/myongdol/profile' target="_blank" rel="noreferrer">
                         <GithubIcon />
                     </a>
@@ -73,7 +95,7 @@ const headerContainer = (theme) => css`
             margin-left: 6px;
         }
 
-        li.github_repository_link {
+        li.github-repository-link {
             margin-left: auto;
             align-self: flex-end;
 
@@ -88,7 +110,7 @@ const headerContainer = (theme) => css`
             }
         }
 
-    a:not(li.github_repository_link a){
+    a:not(li.github-repository-link a){
         display: inline-block;
         padding: 10px 20px;
         border-radius: 10px 10px 0 0;

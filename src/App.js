@@ -19,7 +19,7 @@ export function App() {
   return (
     <>
       <Header />
-      <ThemeButton handleChangeMode={handleChangeMode} />
+      <ThemeButton handleChangeMode={handleChangeMode} className='no-print'/>
       <GreetingLog />
     </>
     )

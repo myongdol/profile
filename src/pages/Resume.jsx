@@ -1,54 +1,38 @@
-import React, {Suspense} from "react";
-import { css } from "@emotion/css";
-import { ResumeComponent } from "../components/ResumeComponent";
 import { mainSection } from "../style/main";
-import styled from "@emotion/styled";
+import { ResumeComponent } from "../components/ResumeComponent";
+import { Suspense } from "react";
+import { useSearchParams } from "react-router-dom";
+import { ResumeType } from "../constant";
+import { printStyle, resumesStyle } from "../style/resumeStyle";
+import { css } from "@emotion/css";
 
 
-const defaultArray = [
-    { name: "ProfileImage", height: 256, marginBottom: 40 },
-    { name: "Name", height: 45, marginBottom: 40 },
-    { name: "Info", height: 142 },
-    { name: "Introduce", height: 363 },
-    { name: "Career", height: 239 },
-    { name: "TechStacks", height: 860 },
-    { name: "Education", height: 284 },
-    { name: "ProjectSection", height: 997 },
-  ];
-  
+export function Resume() {
+  const [searchParams] = useSearchParams();
+  const type = searchParams.get("type") ?? "default";
+  const { components } = ResumeType[type] ?? {};
 
-  export function Resume() {
+  if (components == null) {
     return (
-      <main css={resumeContainer}>
-        {defaultArray.map((x) => (
-          <Suspense key={x.name} fallback={<Skeleton height={x.height} />}>
-            <ResumeComponent name={x.name} />
-          </Suspense>
-        ))}
-      </main>
+      <div style={{ margin: "200px" }}>
+        <h1>Not Found</h1>
+      </div>
     );
-  };
+  }
 
+  return (
+    <main css={resumeContainer(type)}>
+      {components.map((x, index) => (
+        <Suspense key={`${x.name}-${index}`} fallback={<ResumeComponent.Skeleton name={x} />}>
+          <ResumeComponent name={x} />
+        </Suspense>
+      ))}
+    </main>
+  );
+}
 
-  const resumeContainer = css`
-    ${mainSection};
-  `;
-  
-  const Skeleton = styled.div`
-    margin-bottom: ${(props) => props.marginBottom ?? 30}px;
-    width: 100%;
-    height: ${(props) => props.height ?? 100}px;
-    border-radius: 3px;
-    animation: skeleton-gradient 1.8s infinite ease-in-out;
-    @keyframes skeleton-gradient {
-      0% {
-        background-color: rgba(165, 165, 165, 0.1);
-      }
-      50% {
-        background-color: rgba(165, 165, 165, 0.3);
-      }
-      100% {
-        background-color: rgba(165, 165, 165, 0.1);
-      }
-    }
+const resumeContainer = (type) => css`
+  ${mainSection};
+  ${printStyle}
+  ${resumesStyle[type] == null ? "" : resumesStyle[type]}
   `;

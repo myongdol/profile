@@ -13,7 +13,7 @@ export function TechStacks() {
     const [theme] = useTheme();
 
     return (
-        <article css={techStackContainer(theme)}>
+        <article name="techStacks" css={techStackContainer(theme)}>
             <h2>기술스택 목록</h2>
             <ul>
                 {techStackData.map((item) => (

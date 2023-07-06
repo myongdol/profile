@@ -6,3 +6,32 @@ export const URLs = {
     project2 : "b",
     project13: "c",
 }
+
+
+export const ResumeType = {
+    default: {
+      components: [
+        "ProfileImage",
+        "Name",
+        "Info",
+        "Introduce",
+        "Career",
+        "TechStack",
+        "Education",
+        "ProjectSection",
+      ],
+    },
+    onlyResume: {
+      components: [
+        "ProfileImage",
+        "Name",
+        "Career",
+        "TechStack",
+        "Education",
+        "ProjectSection",
+      ],
+    },
+    onlyIntroduce: {
+      components: ["ProfileImage", "Name", "Info", "Introduce"],
+    },
+  };

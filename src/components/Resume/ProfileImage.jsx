@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 
 export default function ProfileImage() {
   return (
-    <article css={infoContainer}>
+    <article name='ProfileImage' css={infoContainer}>
       <div className='profile'>
         <img src='/image/ggam-1.jpg' alt='프로필 사진' />
       </div>

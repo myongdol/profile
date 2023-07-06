@@ -5,11 +5,11 @@ import { useTheme } from "../hooks/useTheme";
 
 
 
-export function ThemeButton({ handleChangeMode }) {
+export function ThemeButton({ className, handleChangeMode }) {
     const [theme] = useTheme();
   
     return (
-      <button css={modeButtonContainer} onClick={handleChangeMode}>
+      <button className={className} css={modeButtonContainer} onClick={handleChangeMode}>
         {theme === "light" ? "🤍" : "🖤"}
       </button>
     );

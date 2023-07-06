@@ -17,7 +17,7 @@ export default function Career () {
 
 
     return (
-        <article css={careerContainer(theme)}>
+        <article name='Career' css={careerContainer(theme)}>
             <h2>경력</h2>
             <ul>
                 <li>회사</li>
