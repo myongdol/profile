@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { 
     fontSize,
     mainColor,
@@ -15,9 +15,13 @@ import { GithubIcon } from "./Resume/GithubIcon";
 
 export function Header() {
     const [theme] = useTheme();
-    const title = window.document.title;
+
+    const location = useLocation();
+    const resume = location.pathname === "/resume";
+ 
 
     const downloadResumePdf = () => {
+    const title = window.document.title;
     window.addEventListener("afterprint", ()=> {
         window.document.title = title;
     });
@@ -36,19 +40,18 @@ export function Header() {
                 <li>
                     <NavLink to='/resume'>Resume</NavLink>
                 </li>
-                <li style={{ marginLeft: "auto" }}>
-                    <button
-                        css={css`
-                        padding: 16px;
-                        cursor: pointer;
-                        `}
-                        onClick={downloadResumePdf}
-                    >
-                        Enter
-                    </button>
+               
+               {resume && (
+                <li css={css`margin-left:auto;`}
+                >
+                <button css={css`padding:16px; cursor: pointer;`} onClick={downloadResumePdf}>
+                    PDF
+                </button>
+            
                 </li>
+               )}
 
-                <li className='github-repository-link' style={{ marginLeft: "10px" }}>
+                <li className={`github-repository-link ${!resume ? "home" : ""}`}>
                     <a href='https://github.com/myongdol/profile' target="_blank" rel="noreferrer">
                         <GithubIcon />
                     </a>
