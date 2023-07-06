@@ -5,9 +5,12 @@ export const ResumeComponentMap = {
   ProfileImage: {
     Component: lazy(() => import("./Resume/ProfileImage")),
     height: 100,
+    marginBottom: 40,
   },
   Name: {
     Component: lazy(() => import("./Resume/Name")),
+    height: 45,
+    marginBottom: 40,
   },
   Info: {
     Component: lazy(() => import("./Resume/Info")),
@@ -21,8 +24,8 @@ export const ResumeComponentMap = {
     Component: lazy(() => import("./Resume/Career")),
     height: 239,
   },
-  techStacks: {
-    Component: lazy(() => import("./Resume/techStacks")),
+  TechStack: {
+    Component: lazy(() => import("./Resume/TechStack")),
     height: 284,
   },
   Education: {

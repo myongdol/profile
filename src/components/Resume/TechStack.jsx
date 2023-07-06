@@ -6,14 +6,14 @@ import { useTheme } from "../../hooks/useTheme";
 import { parseBoldString } from "../../js/ParseBoldString";
 
 
-export function TechStacks() {
+export function TechStack() {
     const fetchUrl = "/data/techStackData.json";
     const fetchStorage = "techStackData";
     const {dataList: techStackData} = useFetch(fetchUrl, fetchStorage);
     const [theme] = useTheme();
 
     return (
-        <article name="techStacks" css={techStackContainer(theme)}>
+        <article name="TechStack" css={techStackContainer(theme)}>
             <h2>기술스택 목록</h2>
             <ul>
                 {techStackData.map((item) => (
