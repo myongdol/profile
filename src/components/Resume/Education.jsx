@@ -6,7 +6,7 @@ import { useTheme } from "../../hooks/useTheme";
 
 
 export default function Education() {
-    const fetchUrl = "/data/educationData.json";
+    const fetchUrl = "/data/resume/educationData.json";
     const fetchStorage = "educationData";
 
     const {dataList: educationList} = useFetch(fetchUrl, fetchStorage);

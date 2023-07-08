@@ -7,7 +7,7 @@ import { parseBoldString } from "../../js/ParseBoldString";
 
 
 export default function TechStack() {
-    const fetchUrl = "/data/techStackData.json";
+    const fetchUrl = "/data/resume/techStackData.json";
     const fetchStorage = "techStackData";
     const {dataList: techStackData} = useFetch(fetchUrl, fetchStorage);
     const [theme] = useTheme();

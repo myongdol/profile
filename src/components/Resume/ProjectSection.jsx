@@ -16,7 +16,7 @@ import styled from "@emotion/styled";
 
 
 export default function ProjectSection() {
-  const fetchUrl = "/data/projectInfoData.json";
+  const fetchUrl = "/data/resume/projectInfoData.json";
   const fetchStorage = "projectInfoData";
   const [theme] = useTheme();
 
