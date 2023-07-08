@@ -2,23 +2,23 @@
     "projectInfoData": [
       {
         "id": "1",
-        "name": "🦊 StackOverFlow 클론코딩 [팀프로젝트]",
-        "period": "2023.06.17 ~ 2023.06.18",
-        "summary" : "부트캠프에서 처음으로 프론트와 백엔드가 만나 진행한 팀 프로젝트 입니다.",
-        "techStack": { "id": "1", "name": ["JavaScript, Styled-Components, React"] },
-        "repositoryLink": "https://github.com/codestates-seb/seb42_pre_008",
-        "projectImage": "/image/projectImg.jpeg",
-        "projectLink": "https://naver.com"
-      },
-      {
-        "id": "2",
-        "name": "🦋여기 와봤니? [팀프로젝트]",
-        "period": "2023.06.17 ~ 2023.06.18",
+        "name": "🛩️ 여기 와봤니? [팀프로젝트]",
+        "period": "2023.03.03 ~ 2023.04.03",
         "summary" : "부트캠프 최종 팀 프로젝트 입니다.",
         "techStack": { "id": "2", "name": ["React", "Redux", "Styled-Components", "TypeScript"] },
         "repositoryLink": "https://github.com/codestates-seb/seb42_main_034",
-        "projectImage": "/image/project/ggam.jpg",
-        "projectLink": "https://naver.com"
+        "projectImage": "/image/project/final_project.png",
+        "projectLink": "http://jungyeon222.s3-website.ap-northeast-2.amazonaws.com/"
+      },
+      {
+        "id": "1",
+        "name": "🦊 StackOverFlow 클론코딩 [팀프로젝트]",
+        "period": "2023.02.13 ~ 2023.03.02",
+        "summary" : "부트캠프에서 처음으로 프론트와 백엔드가 만나 진행한 팀 프로젝트 입니다.",
+        "techStack": { "id": "1", "name": ["JavaScript, Styled-Components, React"] },
+        "repositoryLink": "https://github.com/codestates-seb/seb42_pre_008",
+        "projectImage": "/image/project/stack.png",
+        "projectLink": "https://www.notion.so/codestates/E2I4-c0075c92b8c04b208bb80665b5911867"
       },
       {
         "id": "3",
