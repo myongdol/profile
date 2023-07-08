@@ -85,6 +85,8 @@ const headerContainer = (theme) => css`
     li{
         cursor: pointer;
         box-shadow: ${theme === "light" ? "2px -2px 3px 0px rgb(200 200 200)" : "2px 0px 3px 0px rgb(24 24 24)"};
+        border-radius: 10px 10px 0 0;
+
         &:hover {
             background-color: ${mainColor};
             box-shadow: none;
@@ -94,28 +96,31 @@ const headerContainer = (theme) => css`
         }
     }
 
-        li + li {
-            margin-left: 6px;
+    li.github-repository-link {
+        align-self: flex-end;
+
+        &.home{
+            margin-left: auto;
         }
 
-        li.github-repository-link {
-            margin-left: auto;
-            align-self: flex-end;
-
-            a {
-                display: block;
-                padding: 10px 12px;
+        a {
+            display: block;
+            padding: 9px 12px;
                 
                 svg {
                     width: 30px;
                     height: 30px;
                 }
             }
-        }
+    }
 
     a:not(li.github-repository-link a){
         display: inline-block;
         padding: 10px 20px;
         border-radius: 10px 10px 0 0;
+
+        @media (max-width: 420px) {
+            padding: 15px 10px;
+        }
     }
 `;
