@@ -39,19 +39,20 @@ const careerContainer = (theme) => css`
 
     ul{
         display: grid;
-        gap: 15px;
+        gap: 5px 10px;
         grid-template-columns: 2fr 1fr;
         ${fontSize.contentFontSize16}
         padding: 20px;
         
         li {
             padding: 4px 6px;
+            display: flex;
+            align-items: center;
         }
 
         li:first-of-type,
         li:nth-of-type(2) {
             background-color: ${mainColor};
-            border-radius: 3px;
             font-weight: bold;
         }
 

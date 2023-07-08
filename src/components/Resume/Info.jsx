@@ -22,7 +22,7 @@ export default function Info() {
     return (
         <article name='Info' css={infoContainer(theme)}>
             
-            <div className="profile">
+            {/* <div className="profile">
                 <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
             </div>
 
@@ -32,7 +32,7 @@ export default function Info() {
                 </a>
                 )
                 
-            </h1>
+            </h1> */}
 
             <Hits />
             <DateUpdate yyyymmdd={"20230708"} />

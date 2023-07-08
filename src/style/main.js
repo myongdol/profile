@@ -9,6 +9,10 @@ export const mainSection = css`
     min-height: 100vh;
     margin: 0 auto;
     min-width: 334px;
+
+    @media (max-width: 600px) {
+        padding: 100px 20px;
+    }
 `;
 
 export const mainColor = "rgba(135,131,120,0.15)";

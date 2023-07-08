@@ -115,7 +115,7 @@ const headerContainer = (theme) => css`
     }
 
     a:not(li.github-repository-link a){
-        display: inline-block;
+        display: block;
         padding: 10px 20px;
         border-radius: 10px 10px 0 0;
 
