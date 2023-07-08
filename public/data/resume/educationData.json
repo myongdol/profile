@@ -2,23 +2,16 @@
     "educationData": [
         {
             "id" : 1,
-            "course": "유데미 강의",
-            "period": "2023.06.17~2023.06.17",
-            "site": "https://www.naver.com",
+            "course": "부트캠프 코드스테이츠",
+            "period": "2023.10.10~2023.04.10",
+            "site": "https://www.codestates.com/course/frontend-engineering",
             "certificates": "https://www.naver.com" 
         },
         {
             "id" : 2,
-            "course": "유데미 강의",
-            "period":"2023.06.18~2023.06.18",
-            "site": "https://www.naver.com",
-            "certificates": "https://www.naver.com" 
-        },
-        {
-            "id" : 3,
-            "course": "부트캠프 코드스테이츠",
-            "period":"2022.06.18~2023.06.18",
-            "site": "https://www.naver.com",
+            "course": "React 완벽 가이드",
+            "period":"2023.04.08~2023.06.17",
+            "site": "https://kmooc.udemy.com/course/best-react/",
             "certificates": "https://www.naver.com" 
         }
     ]

@@ -19,16 +19,6 @@
         "repositoryLink": "https://github.com/codestates-seb/seb42_pre_008",
         "projectImage": "/image/project/stack.png",
         "projectLink": "https://www.notion.so/codestates/E2I4-c0075c92b8c04b208bb80665b5911867"
-      },
-      {
-        "id": "3",
-        "name": "🦋여기 와봤니? [팀프로젝트]",
-        "period": "2023.06.17 ~ 2023.06.18",
-        "summary" : "부트캠프 최종 팀 프로젝트 입니다.",
-        "techStack": { "id": "2", "name": ["React", "Redux", "Styled-Components", "TypeScript"] },
-        "repositoryLink": "https://github.com/codestates-seb/seb42_main_034",
-        "projectImage": "/image/project/ggam.jpg",
-        "projectLink": "https://naver.com"
       }
     ]
   }
