@@ -2,9 +2,6 @@ export const URLs = {
     email: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=myongdol132@gmail.com",
     github: "https://github.com/myongdol",
     blog: "https://blog.naver.com/ares132",
-    project1 : "a",
-    project2 : "b",
-    project13: "c",
 }
 
 
@@ -16,6 +13,7 @@ export const ResumeType = {
         "Info",
         "Introduce",
         "Career",
+        "Work",
         "TechStack",
         "Education",
         "ProjectSection",
@@ -26,6 +24,7 @@ export const ResumeType = {
         "ProfileImage",
         "Name",
         "Career",
+        "Work",
         "TechStack",
         "Education",
         "ProjectSection",
