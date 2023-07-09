@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { useTheme } from "../../hooks/theme";
+import { useTheme } from "../../hooks/useTheme";
 import { grayTitleBorderBottom, fontSize, whiteTitleBorderBottom, mainColor } from "../../style/main";
 import { useFetch } from "../../hooks/useFetch";
 

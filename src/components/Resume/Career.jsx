@@ -53,6 +53,7 @@ const careerContainer = (theme) => css`
         li:first-of-type,
         li:nth-of-type(2) {
             background-color: ${mainColor};
+            
             font-weight: bold;
         }
 

@@ -26,7 +26,7 @@ export function Header() {
         window.document.title = title;
     });
 
-    window.document.title = " ";
+    window.document.title = "　";
     window.print();
     }
 
@@ -80,6 +80,7 @@ const headerContainer = (theme) => css`
         justify-content: start;
         ${fontSize.contentFontSize16}
         margin: 16px 0px 0 16px;
+        gap: 6px;
     }
     
     li{

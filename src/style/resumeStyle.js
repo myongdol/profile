@@ -9,6 +9,15 @@ const printStyle = css`
         margin-top: 0px !important;
       }
     }
+
+        // Work 컴포넌트
+        article[name="Work"] {
+      @media print {
+        margin-top: 120px;
+        page-break-before: always;
+      }
+    }
+
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
       > div {

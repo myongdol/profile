@@ -21,6 +21,7 @@ export function GithubIcon() {
 const icon = (theme) => css`
   transform: scaleY(-1);
   vertical-align: middle;
+
   path {
     fill: ${theme === "light" ? "#1b1817 !important" : "white !important"};
   }
