@@ -42,12 +42,14 @@ export default function Info() {
                     </li>
                     <li>
                         <a href={URLs.blog} target="_blank" rel="noreferrer">
-                            😎<span>Blog</span>
+                            😎<span className='no-print'>Blog</span>
+                            <span className='print'>{URLs.blog}</span>
                         </a>
                     </li>
                     <li>
                         <a href={URLs.github} target="_blank" rel="noreferrer">
-                            🐱<span>Github</span>
+                            🐱<span className='no-print'>GitHub</span>
+                              <span className='print'>{URLs.github}</span>
                         </a>
                     </li>
                 </ul>
@@ -57,31 +59,6 @@ export default function Info() {
 }
 
 const infoContainer = (theme) => css`
-  div.profile {
-    text-align: center;
-    width: 256px;
-    height: 256px;
-    border-radius: 50%;
-    overflow: hidden;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
-  }
-
-  h1 {
-    font-family: "GangwonEduPowerExtraBoldA";
-    letter-spacing: 2px;
-    margin: 40px 0;
-    ${fontSize.contentFontSize40};
-    a {
-      &:hover {
-        color: ${theme === "light" ? "#ffc23a" : "#80879d"};
-      }
-    }
-  }
-
   section {
     display: flex;
     justify-content: space-between;
@@ -96,17 +73,13 @@ const infoContainer = (theme) => css`
     border-left-style: solid;
     padding: 10px 20px;
     font-weight: 600;
+    font-size: 2rem;
     width: 60%;
-    display: flex;
     gap: 10px;
     display: flex;
     align-items: center;
     flex-direction: row;
     word-break: keep-all;
-
-    span:first-of-type {
-      height: 100%;
-    }
   }
 
   ul {
@@ -116,19 +89,23 @@ const infoContainer = (theme) => css`
     border-left-width: 10px;
     border-left-style: solid;
     padding: 10px 20px;
+
     li {
       margin: 4px 0;
+
       a {
         &:hover {
           background-color: ${mainColor};
         }
       }
+
       a span {
         margin-right: 10px;
         ${theme === "light" ? grayNormalBorderBottom : whiteNormalBorderBottom};
       }
     }
   }
+
   @media (max-width: 743px) {
     section {
       flex-wrap: wrap;
@@ -144,5 +121,4 @@ const infoContainer = (theme) => css`
       }
     }
   }
-  
 `;
