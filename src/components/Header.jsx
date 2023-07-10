@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
 import { css } from "@emotion/css";
 import { NavLink, useLocation } from "react-router-dom";
 import { 
@@ -73,7 +72,7 @@ const headerContainer = (theme) => css`
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: ${theme ? lightNavBackgroundColor : darkNavBackgroundColor};
+    background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
 
     ul{
         display: flex;
@@ -94,7 +93,7 @@ const headerContainer = (theme) => css`
             box-shadow: none;
         }
         .active{
-            background-color: ${theme ? lightBackgroundColor : darkBackgroundColor};
+            background-color: ${theme === "light" ? lightBackgroundColor : darkBackgroundColor};
         }
     }
 
