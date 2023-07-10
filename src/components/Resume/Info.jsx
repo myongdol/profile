@@ -1,4 +1,4 @@
-import React from "react";
+/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/css";
 import { URLs } from "../../constant";
 import { 

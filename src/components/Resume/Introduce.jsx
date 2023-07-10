@@ -1,4 +1,4 @@
-import React from "react";
+/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useTheme } from "../../hooks/useTheme";
 import { fontSize, whiteTitleBorderBottom, grayTitleBorderBottom } from "../../style/main";
@@ -8,7 +8,7 @@ export default function Introduce() {
      const [theme] = useTheme();
 
      return (
-        <article css={introduceContainer(theme)}> 
+        <article css={introduceContainer(theme)} name='Introduce'> 
             <h2>안녕하세요</h2>
             <section>
                 <p css={css`text-indent: 16px;`}>
@@ -38,12 +38,8 @@ const introduceContainer = (theme) => css`
     }
     
     section {
-        margin: 20px;
+        margin: 20px 0;
         ${fontSize.contentFontSize16}
         line-height: 1.5;
-
-        p span {
-            color: transparent;
-        }
     }
 `;

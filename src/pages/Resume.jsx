@@ -1,9 +1,10 @@
+/** @jsxImportSource @emotion/react */
 import { mainSection } from "../style/main";
 import { ResumeComponent } from "../components/ResumeComponent";
 import { Suspense } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ResumeType } from "../constant";
-import { printStyle, resumesStyle } from "../style/resumeStyle";
+import { printStyle, resumesStyling } from "../style/resumeStyle";
 import { css } from "@emotion/css";
 
 
@@ -34,5 +35,5 @@ export function Resume() {
 const resumeContainer = (type) => css`
   ${mainSection};
   ${printStyle}
-  ${resumesStyle[type] == null ? "" : resumesStyle[type]}
+  ${resumesStyling[type] == null ? "" : resumesStyling[type]}
   `;

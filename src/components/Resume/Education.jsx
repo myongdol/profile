@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import React from "react";
 import { css } from "@emotion/css";
 import { fontSize, mainColor, subColor, grayTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";

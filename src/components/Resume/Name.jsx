@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { URLs } from "../../constant";
 import { fontSize } from "../../style/main";

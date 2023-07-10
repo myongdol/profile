@@ -1,4 +1,4 @@
-import React from "react";
+/** @jsxImportSource @emotion/react */
 import { LandingPage } from "../components/homepage/LandingPage";
 
 

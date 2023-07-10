@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { mainSection } from "../style/main";
 import { useMoveScroll } from "../hooks/useMoveScroll";

@@ -80,10 +80,10 @@ const defaultType = css`
       display: none;
     }
     // TechStacks 컴포넌트
-    article[name="techStacks"] {
+    article[name="TechStack"] {
       /* margin-top: 120px;
       page-break-before: always; */
-      li:nth-of-type(6n) {
+      li:nth-of-type(4) {
         margin-top: 120px;
         page-break-before: always;
       }
@@ -103,8 +103,8 @@ const onlyResumeType = css`
       display: none;
     }
     // TechStack 컴포넌트
-    article[name="techStacks"] {
-      li:nth-of-type(6n) {
+    article[name="TechStack"] {
+      li:nth-of-type(4) {
         margin-top: 120px;
         page-break-before: always;
       }
@@ -132,10 +132,10 @@ const onlyIntroduceType = css`
   }
 `;
 
-const resumesStyle = {
+const resumesStyling = {
   default: defaultType,
   onlyResume: onlyResumeType,
   onlyIntroduce: onlyIntroduceType,
 };
 
-export { printStyle, resumesStyle };
+export { printStyle, resumesStyling };
