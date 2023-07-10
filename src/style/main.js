@@ -4,7 +4,6 @@ import { css } from "@emotion/css";
 
 export const mainSection = css`
     padding: 100px 40px;
-    border: 1px solid;
     max-width: 1200px;
     min-height: 100vh;
     margin: 0 auto;
