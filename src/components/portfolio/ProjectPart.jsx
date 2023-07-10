@@ -44,13 +44,18 @@ const PartTitleList = styled.li`
     font-size: 1.5rem;
     line-height: 1.4;
     margin-top: 10px;
+
+    &::before {
+    content: "";
+    padding-left: 6px;
+  }
 `
 
 
 const PartContentList = styled.li`
-    list-style: inside;
     list-style-type: disc;
-    font-weight: normal;
-    font-size: 1.4rem;
+    list-style: inside;
     margin-left: 10px;
+    font-size: 1.4rem;
+    font-weight: normal;
 `
