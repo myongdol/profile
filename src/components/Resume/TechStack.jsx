@@ -3,7 +3,7 @@ import { css } from "@emotion/css";
 import { fontSize, grayTitleBorderBottom, boxTextColor, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/useFetch";
 import { useTheme } from "../../hooks/useTheme";
-import { parseBoldString } from "../../js/ParseBoldString";
+import { TranslateBold } from "../../TranslateBold";
 
 
 export default function TechStack() {
@@ -13,34 +13,30 @@ export default function TechStack() {
     const [theme] = useTheme();
 
     return (
-        <article name="TechStack" css={techStackContainer(theme)}>
-            <h2>기술스택 목록</h2>
-            <ul>
-                {techStackData.map((item) => (
-                    <React.Fragment key={`techStack-${item.id}`}>
-                        <li>
-                            <img src={item.techStackImage} alt={item.StackName} />
-                            <div>
-                                <p css={css`font-weight: bold; color: ${boxTextColor};`}>
-                                    {item.techStackName}
-                                </p>
-                                <p>
-                                    {parseBoldString(item.techDescription).map((x, i) => {
-                                        if (x.startsWith("**")) {
-                                            return <strong key={`${i}-${x}`}>{x.slice(2)}</strong>
-                                        } else {
-                                            return <span key ={`${i}-${x}`}>{x}</span>
-                                        }
-                                    })}
-                                </p>
-                            </div>
-                          
-                        </li>
-                    </React.Fragment>
-                ))}
-            </ul>
+        <article name='TechStack' css={techStackContainer(theme)}>
+          <h2>🤹‍♀️ 기술 스택</h2>
+          <ul>
+            {techStackData.map((item) => (
+              <React.Fragment key={`techStack-${item.id}`}>
+                <li>
+                  <img src={item.techStackImage} alt={item.techStackName} />
+                  <div>
+                    <p
+                      css={css`
+                        font-weight: bold;
+                        color: ${boxTextColor};
+                      `}
+                    >
+                      {item.techStackName}
+                    </p>
+                    <TranslateBold>{item.techDescription}</TranslateBold>
+                  </div>
+                </li>
+              </React.Fragment>
+            ))}
+          </ul>
         </article>
-    )
+      );
 }
 
 

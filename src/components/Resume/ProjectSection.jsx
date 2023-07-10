@@ -22,10 +22,7 @@ export default function ProjectSection() {
 
   const { dataList: projectList } = useFetch(fetchUrl, fetchStorage);
 
-  const putNewline = (data) => {
-    const paragraph = data.split("/n");
-    return paragraph;
-  }
+
   return (
     <article name="ProjectSection" css={projectInfoContainer(theme)}>
       <h2>프로젝트</h2>
@@ -71,9 +68,7 @@ export default function ProjectSection() {
               <ProjectPeriod>프로젝트 진행기간 : {item.period}</ProjectPeriod>
               <div className="print">{item.projectLink}</div>
               <ProjectSummary>
-                {putNewline(item.summary).map((summary, index) => (
-                  <p key={`summary-${index}`}>{summary}</p>
-                ))}
+                  <p>{item.summary}</p>
               </ProjectSummary>
               <TechStackContainer>
                 {item.techStack.name.map((x, index) => (
@@ -142,7 +137,7 @@ const ButtonContainer = styled.div`
 
 const ProjectCardTextContainer = styled.div`
   padding: 20px;
-  position: relative;
+
   p {
     line-height: 1.5;
   }
@@ -179,8 +174,11 @@ const TechStackContainer = styled.ul`
 `;
 
 const ProjectSummary = styled.div`
+  font-size: 1.4rem;
   padding: 10px;
   height: 100px;
   margin-top: 16px;
   overflow: scroll;
+  white-space: pre-wrap;
+  word-break: keep-all;
 `;
