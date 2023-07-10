@@ -27,6 +27,13 @@ export default function Education() {
                       {item.course}
                     </a>
                   </li>
+                  <li
+                    css={css`
+                      white-space: pre-wrap;
+                    `}
+                  >
+                    {item.period}
+                  </li>
                   <li>
                   <a 
                   href={item.certificates}
@@ -66,7 +73,7 @@ const educationContainer = (theme) => css`
     align-items: center;
     display: flex;
     padding: 4px 6px;
-
+    word-break:keep-all;
     a {
       padding-bottom: 1px;
       color: ${theme === "light" ? "#005aad" : "skyblue"};

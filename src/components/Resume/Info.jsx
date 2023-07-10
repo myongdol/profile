@@ -22,18 +22,6 @@ export default function Info() {
     return (
         <article name='Info' css={infoContainer(theme)}>
             
-            {/* <div className="profile">
-                <img src='https://avatars.githubusercontent.com/u/110724985?v=4' alt='프로필사진' />
-            </div>
-
-            <h1> 김용석 (
-                <a href={URLs.github} target="_blank" rel="noreferrer">
-                    Myongdol
-                </a>
-                )
-                
-            </h1> */}
-
             <Hits />
             <DateUpdate yyyymmdd={"20230708"} />
 
@@ -141,19 +129,16 @@ const infoContainer = (theme) => css`
       }
     }
   }
-
   @media (max-width: 743px) {
-    img {
-      display: block;
-      margin: 0 auto;
-    }
     section {
       flex-wrap: wrap;
       justify-content: center;
+
       p.description,
       ul {
         width: 100%;
       }
+
       p.description span:first-of-type {
         margin-top: -4px;
       }

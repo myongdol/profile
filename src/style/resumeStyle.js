@@ -58,6 +58,8 @@ const printStyle = css`
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
       color: red;
+      margin-top: 120px;
+      page-break-before: always;
     }
   }
 `;
@@ -68,14 +70,19 @@ const defaultType = css`
     article[name="ProfileImage"] {
       display: none;
     }
-    // ProfileImage 컴포넌트
+    // Education 컴포넌트
+    article[name="Education"] {
+      margin-top: 120px;
+      page-break-before: always;
+    }
+    // Career 컴포넌트
     article[name="Career"] {
       display: none;
     }
     // TechStacks 컴포넌트
     article[name="techStacks"] {
-      margin-top: 120px;
-      page-break-before: always;
+      /* margin-top: 120px;
+      page-break-before: always; */
       li:nth-of-type(6n) {
         margin-top: 120px;
         page-break-before: always;
