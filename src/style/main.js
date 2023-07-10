@@ -34,7 +34,6 @@ export const lightBoxShadow = "rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15
 
 export const grayNormalBorderBottom = css`
     border-bottom: 1px solid rgba(55, 53, 47, 0.16);
-    padding-bottom: 8px;
 `
 
 export const grayTitleBorderBottom = css`
