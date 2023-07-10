@@ -9,7 +9,7 @@ export default function Name() {
   const [theme] = useTheme();
 
   return (
-    <article name='name' css={infoContainer(theme)}>
+    <article name='Name' css={infoContainer(theme)}>
       <h1>
         김용석 (
         <a href={URLs.github} target='_blank' rel='noreferrer'>
