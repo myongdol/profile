@@ -66,7 +66,9 @@ export default function ProjectSection() {
             <ProjectCardTextContainer>
               <ProjectName>{item.name}</ProjectName>
               <ProjectPeriod>프로젝트 진행기간 : {item.period}</ProjectPeriod>
-              <div className="print">{item.projectLink}</div>
+                <div className="print">
+                  <a href={item.projectLink}>{item.projectLink}</a>
+                </div>
               <ProjectSummary>
                   <p>{item.summary}</p>
               </ProjectSummary>
@@ -97,6 +99,7 @@ const projectInfoContainer = (theme) => css`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
   margin: 20px 0;
+
   @media (max-width: 400px) {
     display: grid;
     grid-template-columns: 1fr;
@@ -123,12 +126,14 @@ const ButtonContainer = styled.div`
   align-items: center;
   padding: 0;
   margin: 0 0 10px;
+
   .themore-button {
     width: auto;
     border-radius: 8px;
     padding: 0 10px;
     font-weight: bold;
   }
+  
   .circle-button-container {
     display: flex;
     gap: 10px;
