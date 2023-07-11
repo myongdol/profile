@@ -28,10 +28,8 @@ export default function Info() {
 
             <section>
                 <p className="description">
-                    <span>😁</span>
                     <span>
-                        프론트엔드 개발자가 되기 위해 공부를 지속적으로 하고 있습니다 안녕하세요.
-                        반갑습니다.
+                        프론트엔드 개발자가 되기 위해 공부를 지속적으로 하고 있는 성장하는 개발자 김용석 입니다.
                     </span>
                 </p>
                 <ul>
