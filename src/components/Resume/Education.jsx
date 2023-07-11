@@ -75,6 +75,7 @@ const educationContainer = (theme) => css`
     display: flex;
     padding: 4px 6px;
     word-break:keep-all;
+    
     a {
       padding-bottom: 1px;
       color: ${theme === "light" ? "#005aad" : "skyblue"};
