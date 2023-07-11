@@ -20,10 +20,10 @@ export default function Career () {
         <article name='Career' css={careerContainer(theme)}>
             <h2>경력</h2>
             <ul>
-                <li>회사</li>
-                <li>근무기간</li>
-                <li>직책</li>
-                <li>경력</li>
+                <li>은혜앵글진열공사</li>
+                <li>2015.02.02 ~ 2019.09.16</li>
+                <li>현장 시공팀 대리</li>
+                <li>현장시공을 다니며 시공 및 관리감독을 하였습니다.</li>
             </ul>
         </article>
     )

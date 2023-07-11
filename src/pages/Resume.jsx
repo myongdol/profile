@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ResumeType } from "../constant";
 import { printStyle, resumesStyling } from "../style/resumeStyle";
-import { css } from "@emotion/css";
+import { css } from "@emotion/react";
 
 
 export function Resume() {
