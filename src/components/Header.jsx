@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/css";
+import { css } from "@emotion/react";
 import { NavLink, useLocation } from "react-router-dom";
 import { 
     fontSize,
@@ -66,13 +66,13 @@ export function Header() {
 
 
 const headerContainer = (theme) => css`
-    font-family: "GangwonEduPowerExtraBoldA";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
+  background-color: ${theme === "light" ? lightNavBackgroundColor : darkNavBackgroundColor};
+  font-family: "GangwonEduPowerExtraBoldA";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 
     ul{
         display: flex;
@@ -98,22 +98,22 @@ const headerContainer = (theme) => css`
     }
 
     li.github-repository-link {
-        align-self: flex-end;
+    align-self: flex-end;
 
-        &.home{
-            margin-left: auto;
-        }
-
-        a {
-            display: block;
-            padding: 9px 12px;
-                
-                svg {
-                    width: 30px;
-                    height: 30px;
-                }
-            }
+    &.home {
+      margin-left: auto;
     }
+
+    a {
+      display: block;
+      padding: 9px 12px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 
     a:not(li.github-repository-link a){
         display: block;

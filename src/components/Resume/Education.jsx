@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import { css } from "@emotion/css";
+import { css } from "@emotion/react";
 import { fontSize, mainColor, subColor, grayTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/useFetch";
 import { useTheme } from "../../hooks/useTheme";
