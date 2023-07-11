@@ -49,11 +49,11 @@ export default function ProjectSection() {
                   onClick={() => {
                     window.open(item.repositoryLink, "_blank");
                   }}
-                  light={<img src='/images/icons/github-light-icon.png' alt='' />}
-                  dark={<img src='/images/icons/github-dark-icon.png' alt='' />}
+                  light={<img src='/image/icons/github-light-icon.png' alt='' />}
+                  dark={<img src='/image/icons/github-dark-icon.png' alt='' />}
                 />
                 <CircleButton>
-                  <img src="/image/icon/notion-icon.svg" alt="notion" />
+                  <img src="/image/icons/notion-icon.svg" alt="notion" />
                 </CircleButton>
               </div>
               <a href={item.projectLink} target='_blank' rel='noreferrer'>
