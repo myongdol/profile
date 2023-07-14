@@ -4,7 +4,7 @@
         "id": "1",
         "name": "🛩️ 여기 와봤니? [팀프로젝트]",
         "period": "2023.03.03 ~ 2023.04.03",
-        "summary" : "부트캠프 최종 팀 프로젝트 입니다. 프론트 4명, 백엔드 4명이서 시작 하였지만 마지막 주에 프론트 2분께서 잠수를 타셔서 사이트가 미완성 상태로 프로젝트가 종료 되었습니다.",
+        "summary" : "부트캠프 최종 팀 프로젝트 입니다. 프론트 4명, 백엔드 4명이서 시작 하였지만 마지막 주에 프론트 2분께서 잠수를 타셔서 사이트가 미완성 상태로 프로젝트가 종료 되었으며 제가 개발 진행한 페이지는 회원가입, 로그인, 마이페이지 입니다.",
         "techStack": { "id": "1", "name": ["React", "Redux", "Styled-Components", "TypeScript"] },
         "repositoryLink": "https://github.com/codestates-seb/seb42_main_034",
         "projectImage": "/image/project/final_project.png",
