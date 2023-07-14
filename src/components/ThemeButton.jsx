@@ -10,7 +10,7 @@ export function ThemeButton({ className, handleChangeMode }) {
   
     return (
       <button className={className} css={modeButtonContainer} onClick={handleChangeMode}>
-        {theme === "light" ? "🤍" : "🖤"}
+        {theme === "light" ? "☀️" : "🌑"}
       </button>
     );
   }
