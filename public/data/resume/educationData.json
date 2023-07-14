@@ -5,14 +5,21 @@
             "course": "부트캠프 코드스테이츠",
             "period": "2023.10.10~2023.04.10",
             "site": "https://www.codestates.com/course/frontend-engineering",
-            "certificates": "https://www.naver.com" 
+            "certificates": "https://drive.google.com/file/d/1vr9HWBLoNo-Pz5U-ONK5w4RHgRLNLW4T/view?usp=sharing" 
         },
         {
             "id" : 2,
             "course": "React 완벽 가이드",
             "period":"2023.04.08~2023.06.17",
             "site": "https://kmooc.udemy.com/course/best-react/",
-            "certificates": "https://www.naver.com" 
+            "certificates": "https://drive.google.com/file/d/1HXSBxqF4hqEPtFCQMCy9BvzzvfK_Sx_w/view" 
+        },
+        {
+            "id" : 3,
+            "course": "JavaScript 완벽 가이드",
+            "period":"2023.06.18~2023.06.17",
+            "site": "https://www.udemy.com/course/javascript-zw/",
+            "certificates": "https://drive.google.com/file/d/11EJnhIGeCzfscbSy_W0kiNvt_-GAq--N/view" 
         }
     ]
 }
