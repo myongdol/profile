@@ -22,7 +22,7 @@ export default function Work() {
           {workList.map((work) => (
             <WorkItem key={work.id} theme>
               <div className='work-left'>
-                <p>{work.period} ~</p>
+                <p>{work.period}</p>
                 <p className='work-item-company'>{work.companyName}</p>
                 <p>{work.task}</p>
               </div>
