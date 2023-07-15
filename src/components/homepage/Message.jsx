@@ -80,6 +80,7 @@ const ResumLink = styled.div`
   justify-content: center;
 
   a {
+    border: 1px solid #6b666678;
     border-radius: 3px;
     padding: 10px 30px;
     color: #fff;
