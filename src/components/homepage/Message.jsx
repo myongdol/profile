@@ -91,7 +91,8 @@ const ResumLink = styled.div`
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      background-color: #c8c8c8c8;
+      background-color: black;
+      color: white;
       transform: scale(1.1);
       transition: all 0.2s ease-in-out;
     }
