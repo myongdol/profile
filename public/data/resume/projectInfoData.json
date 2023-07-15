@@ -8,7 +8,8 @@
         "techStack": { "id": "1", "name": ["React", "Redux", "Styled-Components", "TypeScript"] },
         "repositoryLink": "https://github.com/codestates-seb/seb42_main_034",
         "projectImage": "/image/project/final_project.png",
-        "projectLink": "http://jungyeon222.s3-website.ap-northeast-2.amazonaws.com/"
+        "projectLink": "http://jungyeon222.s3-website.ap-northeast-2.amazonaws.com/",
+        "notionLink":"https://www.notion.so/codestates/078960fedcb64c91b2833c0d5dd4e645"
       },
       {
         "id": "2",
@@ -18,7 +19,8 @@
         "techStack": { "id": "2", "name": ["JavaScript", "Styled-Components", "React"] },
         "repositoryLink": "https://github.com/codestates-seb/seb42_pre_008",
         "projectImage": "/image/project/stack.png",
-        "projectLink": "https://www.notion.so/codestates/E2I4-c0075c92b8c04b208bb80665b5911867"
+        "projectLink": "https://www.notion.so/codestates/E2I4-c0075c92b8c04b208bb80665b5911867",
+        "notionLink":"https://www.notion.so/codestates/E2I4-c0075c92b8c04b208bb80665b5911867"
       }
     ]
   }

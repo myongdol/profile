@@ -52,9 +52,15 @@ export default function ProjectSection() {
                   light={<img src='/image/icons/github-light-icon.png' alt='' />}
                   dark={<img src='/image/icons/github-dark-icon.png' alt='' />}
                 />
-                <CircleButton>
-                  <img src="/image/icons/notion-icon.svg" alt="notion" />
-                </CircleButton>
+                {item.notionLink && (
+                  <CircleButton
+                    onClick={() => {
+                      window.open(item.notionLink, "_blank");
+                    }}
+                  >
+                    <img src='/image/icons/notion-icon.svg' alt='' />
+                  </CircleButton>
+                )}
               </div>
               <a href={item.projectLink} target='_blank' rel='noreferrer'>
                 <CircleButton type='button' className='themore-button'>
