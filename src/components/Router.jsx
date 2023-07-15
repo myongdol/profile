@@ -4,7 +4,7 @@ import {Resume} from "../pages/Resume";
 import {Home} from "../pages/Home";
 import { useEffect, Suspense } from "react";
 import { useLocation } from "react-router-dom";
-import {Portfolio} from "../pages/Portfolio";
+
 
 
 export function Router() {
@@ -25,7 +25,6 @@ export function Router() {
             </Suspense>
           }
         />
-        <Route path='/portfolio' element={<Portfolio />} />
       </Routes>
     );
 };
