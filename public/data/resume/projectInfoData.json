@@ -21,6 +21,15 @@
         "projectImage": "/image/project/stack.png",
         "projectLink": "https://www.notion.so/codestates/E2I4-c0075c92b8c04b208bb80665b5911867",
         "notionLink":"https://www.notion.so/codestates/E2I4-c0075c92b8c04b208bb80665b5911867"
+      },
+      {
+      "id": "3",
+      "name": "간단한 일기장 만들기",
+      "period": "2023.07.17 ~ 진행중",
+      "summary" : "강의를 통해 진행한 간단한 일기장 만들기 입니다.",
+      "techStack": {"id": "3", "name": ["React"]},
+      "repositoryLink": "https://github.com/myongdol/simple_diary",
+      "projectLink": "https://64b53f7a8e86b3006cbd9801--myongdolresume.netlify.app/"
       }
     ]
   }
