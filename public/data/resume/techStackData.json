@@ -38,9 +38,15 @@
         },
         {
             "id": 7,
-            "techStackName": "typeScript",
+            "techStackName": "TypeScript",
             "techStackImage": "/image/techStack/ts-img.png",
             "techDescription": "현재 공부중입니다."
+        },
+        {
+            "id": 8,
+            "techStackName": "React-Native",
+            "techStackImage": "/image/techStack/react-native-img.png",
+            "techDescription": "**학습 예정입니다~! **"
         }
     ]
 }
