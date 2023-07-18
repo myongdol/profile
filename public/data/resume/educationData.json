@@ -27,6 +27,13 @@
             "period": "2023.05.23~2023.07.13",
             "site":"https://www.edwith.org/cs50",
             "certificates": "https://drive.google.com/file/d/1BmJmNvejVgRNwCyn4F_HkOqFzr-Yn8F3/view?usp=sharing"
+        },
+        {
+            "id" : 5,
+            "course": "웹 접근성 이해",
+            "period": "2023.07.14~학습 진행중",
+            "site": "https://www.boostcourse.org/web201/joinLectures/193141",
+            "certificates": "https://naver.com"
         }
     ]
 }
