@@ -34,6 +34,13 @@
             "period": "2023.07.14~학습 진행중",
             "site": "https://www.boostcourse.org/web201/joinLectures/193141",
             "certificates": "https://naver.com"
+        },
+        {
+            "id" : 6,
+            "course": "한입 크기로 잘라먹는 리액트",
+            "period": "2023.07.19~2023.08.02",
+            "site": "https://www.udemy.com/course/winterlood-react-basic/",
+            "certificates":"https://drive.google.com/file/d/1yw_TOdo8V4LTmm2ZwacEqxjboJP24b4l/view?usp=sharing"
         }
     ]
 }
