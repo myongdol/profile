@@ -28,8 +28,8 @@
       "period": "2023.07.17 ~ 진행중",
       "summary" : "강의를 통해 진행한 간단한 일기장 만들기 입니다.",
       "techStack": {"id": "3", "name": ["React"]},
-      "repositoryLink": "https://github.com/myongdol/simple_diary",
-      "projectLink": "https://myongdoldiary.netlify.app"
+      "repositoryLink": "https://github.com/myongdol/emotion_diary",
+      "projectLink": "https://myongdol-react-project.web.app/"
       }
     ]
   }
