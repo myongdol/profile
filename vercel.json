@@ -1,5 +1,7 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
-    ]
-  }
+  "rewrites": [
+    { "source": "^/$", "destination": "/index.html" },
+    { "source": "^/resume$", "destination": "/resume/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
