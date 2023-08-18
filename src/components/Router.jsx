@@ -1,10 +1,11 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import {Resume} from "../pages/Resume";
-import {Home} from "../pages/Home";
+import {} from "../pages/Home";
 import { useEffect, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import { Home } from "../pages/Home";
 
 export function Router() {
   const navigate = useNavigate();
