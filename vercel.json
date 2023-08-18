@@ -1,6 +1,6 @@
 {
     "rewrites": [
-        { "source": "/(.*)", "destination": "https://profile-phi-blush.vercel.app"},
-        { "source": "/resume", "destination": "https://profile-phi-blush.vercel.app/resume"}
+      { "source": "/resume", "destination": "https://profile-phi-blush.vercel.app/resume" },
+      { "source": "/(.*)", "destination": "https://profile-phi-blush.vercel.app/" }
     ]
 }
