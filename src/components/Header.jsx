@@ -35,10 +35,10 @@ export function Header() {
         <nav css={headerContainer(theme)} className='no-print'>
             <ul>
                 <li>
-                    <NavLink to='/' replace>HOME</NavLink>
+                    <NavLink to='/' replace={true}>HOME</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/resume' replace>RESUME</NavLink>
+                    <NavLink to='/resume' replace={true}>RESUME</NavLink>
                 </li>
                
                {resume && (
